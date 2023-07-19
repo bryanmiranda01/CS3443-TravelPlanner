@@ -4,12 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/off_white"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.TravelPlanner.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/home_text"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/dark_blue"
+            android:fontFamily="monospace"
+            android:text="@string/menu_home"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            android:translationZ="120dp" />
+
+        <TextView
+            android:id="@+id/upcoming_trips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_text"
+            android:layout_marginTop="0dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/upcoming_trips"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/loc_placeholder1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upcoming_trips"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="-10dp"
+            android:background="@color/light_blue"
+            android:text="@string/loc_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/loc_placeholder2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loc_placeholder1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="-180dp"
+            android:background="@color/light_blue"
+            android:text="@string/loc_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/loc_placeholder3"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loc_placeholder2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="100dp"
+            android:background="@color/light_blue"
+            android:text="@string/loc_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -18,17 +105,151 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:id="@+id/notif_reminder1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/notif_reminder2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="9dp"
+            android:background="@color/light_blue"
+            android:text="@string/rem_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-    <include layout="@layout/content_main" />
+        <TextView
+            android:id="@+id/notif_reminder2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bot_bar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="40dp"
+            android:background="@color/light_blue"
+            android:text="@string/rem_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/reminders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/notif_reminder1"
+            android:layout_marginBottom="20dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/reminder"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <include layout="@layout/content_main" />
+
+        <ImageView
+            android:contentDescription="@string/star"
+            android:id="@+id/star1"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/loc_placeholder1"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="137dp"
+            android:layout_marginEnd="257dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <ImageView
+            android:contentDescription="@string/star"
+            android:id="@+id/star4"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/notif_reminder1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="255dp"
+            android:layout_marginBottom="138dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <ImageView
+            android:contentDescription="@string/star"
+            android:id="@+id/star5"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/notif_reminder2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="255dp"
+            android:layout_marginBottom="102dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <ImageView
+            android:contentDescription="@string/star"
+            android:id="@+id/star2"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/loc_placeholder2"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="176dp"
+            android:layout_marginEnd="257dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <ImageView
+            android:contentDescription="@string/star"
+            android:id="@+id/star3"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_alignEnd="@+id/loc_placeholder3"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="211dp"
+            android:layout_marginEnd="257dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <TextView
+            android:id="@+id/bot_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/dark_blue" />
+
+        <ImageView
+            android:contentDescription="@string/placeholder"
+            android:id="@+id/sidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="360dp"
+            android:translationZ="270dp"
+            app:srcCompat="@drawable/itinerary" />
+
+
+    </RelativeLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:contentDescription="@string/button"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginBottom="100dp"
+        app:srcCompat="@drawable/add_trip" />
+
+    <ImageView
+        android:contentDescription="@string/placeholder"
+        android:id="@+id/placeholderimage"
+        android:layout_width="212dp"
+        android:layout_height="141dp"
+        app:layout_anchor="@+id/relativeLayout"
+        app:layout_anchorGravity="center"
+        android:src="@drawable/placeholder_image" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

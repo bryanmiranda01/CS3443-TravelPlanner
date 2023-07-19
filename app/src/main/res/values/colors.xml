@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //custom colors 'ocean'
+    <color name="dark_blue">#064273</color> //Use for top and bottom bars
+    <color name="pastel_blue">#76B6C4</color> //Use for comment spaces
+    <color name="light_blue">#7FCDFF</color> //Use for buttons
+    <color name="aqua">#1DA2D8</color> //???
+    <color name="off_white">#DEF3F6</color> //Background?
+
 </resources>

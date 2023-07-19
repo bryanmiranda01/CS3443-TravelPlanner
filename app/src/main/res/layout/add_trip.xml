@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/dark_blue" />
+
+        <TextView
+            android:id="@+id/add_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/destination"
+            android:layout_marginBottom="22dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/add_trip"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/destination"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_dest"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/destination"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ans_dest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/hotel_address"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/hotel_address"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_hotel"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/hotel_address"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ans_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/city_country"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/city_country"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_cc"
+            android:layout_marginBottom="9dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/city_country"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ans_cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/start_date"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_start"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/start_date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ans_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/end_date"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/end_date"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_end"
+            android:layout_marginBottom="8dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/end_date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/ans_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/transport"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ans_transport"
+            android:layout_marginBottom="10dp"
+            android:background="@color/off_white"
+            android:text="@string/transportation"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/ans_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/done_add"
+            android:layout_marginBottom="20dp"
+            android:background="@color/off_white"
+            android:text="@string/user_input"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/done_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="65dp"
+            android:background="@color/off_white"
+            android:fontFamily="serif"
+            android:text="@string/done"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/bot_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/dark_blue" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
