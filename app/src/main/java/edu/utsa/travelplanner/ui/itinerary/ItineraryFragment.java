@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner.ui.slideshow;
+package edu.utsa.travelplanner.ui.itinerary;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import edu.utsa.travelplanner.databinding.FragmentSlideshowBinding;
+import edu.utsa.travelplanner.databinding.FragmentItineraryBinding;
 
-public class SlideshowFragment extends Fragment {
+public class ItineraryFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private edu.utsa.travelplanner.databinding.FragmentItineraryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        ItineraryViewModel itineraryViewModel =
+                new ViewModelProvider(this).get(ItineraryViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentItineraryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textItinerary;
+        itineraryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

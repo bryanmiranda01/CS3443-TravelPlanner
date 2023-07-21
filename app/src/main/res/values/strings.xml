@@ -2,12 +2,38 @@
     <string name="app_name">Travel Planner</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Travel Planner</string>
+    <string name="nav_header_subtitle">username placeholder</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">ActionSettings</string>
 
+<!--Menus-->
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_itinerary">Itinerary</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_settings">Settings</string>
+
+
+<!--Trip strings-->
+    <string name="upcoming_trips">Upcoming trips</string>
+    <string name="add_trip">Add trip</string>
+    <string name="destination">-Destination:</string>
+    <string name="hotel_address">-Hotel Address:</string>
+    <string name="city_country">-City/Counter"</string>
+    <string name="start_date">-Start date:</string>
+    <string name="end_date">-End date:</string>
+    <string name="transportation">-Mode of transportation:</string>
+
+<!--Icons/images/symbols-->
+    <string name="star">Star image</string>
+    <string name="placeholder">Placeholder image</string>
+    <string name="button">Button</string>
+
+<!--\General strings-->
+    <string name="done">Done</string>
+    <string name="user_input">user input</string>
+    <string name="loc_placeholder">Location placeholder</string>
+    <string name="rem_placeholder">Reminder placeholder</string>
+    <string name="reminder">Reminders</string>
+
 </resources>
