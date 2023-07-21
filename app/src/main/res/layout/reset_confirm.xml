@@ -12,7 +12,6 @@
         android:background="@color/teal_700"
         />
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bottommargin"
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         />
 
     <TextView
-        android:id="@+id/loginfailed"
+        android:id="@+id/securityq"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -30,33 +29,46 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="Login failed"
+        android:text="Answer security question"
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/details"
+        android:id="@+id/user_securityq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/loginfailed"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:text="Username or password is incorrect. Please try again."
+        android:layout_below="@id/securityq"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:text="**User's security questions**"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"/>
 
-    <Button
-        android:id="@+id/signin_button"
+    <EditText
+        android:id="@+id/userinput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/details"
+        android:layout_below="@id/user_securityq"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="Answer"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinput"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
         android:backgroundTint="#BBE5EA"
@@ -66,5 +78,4 @@
         android:text="Next"
         android:textAlignment="gravity"
         android:textColor="@color/black" />
-
 </RelativeLayout>
