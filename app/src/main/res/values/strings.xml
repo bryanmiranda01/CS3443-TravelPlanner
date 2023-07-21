@@ -19,10 +19,16 @@
     <string name="add_trip">Add trip</string>
     <string name="destination">-Destination:</string>
     <string name="hotel_address">-Hotel Address:</string>
-    <string name="city_country">-City/Counter"</string>
+    <string name="city_country">-City/Counter:</string>
     <string name="start_date">-Start date:</string>
     <string name="end_date">-End date:</string>
     <string name="transportation">-Mode of transportation:</string>
+    <string name="select_itin">Select itinerary</string>
+    <string name="select_details">What do you wish to view?</string>
+    <string name="trip_details">Trip details</string>
+    <string name="pre_trip_check">Pre-trip checklist</string>
+    <string name="luggage_details">Luggage</string>
+
 
 <!--Icons/images/symbols-->
     <string name="star">Star image</string>
@@ -30,9 +36,14 @@
     <string name="button">Button</string>
 
 <!--\General strings-->
-    <string name="done">Done</string>
+    <string name="done_btn">Done</string>
+    <string name="next_btn">Next</string>
+    <string name="return_btn">Return</string>
     <string name="user_input">user input</string>
+    <string name="gen_placeholder">Generic placeholder</string>
     <string name="loc_placeholder">Location placeholder</string>
+    <string name="date_placeholder">Date placeholder</string>
+    <string name="act_placeholder">Activity placeholder</string>
     <string name="rem_placeholder">Reminder placeholder</string>
     <string name="reminder">Reminders</string>
 

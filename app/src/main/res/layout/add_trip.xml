@@ -14,7 +14,6 @@
             android:id="@+id/top_bar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginBottom="50dp"
             android:background="@color/dark_blue" />
 
         <TextView
@@ -22,14 +21,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/destination"
-            android:layout_marginBottom="22dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/off_white"
             android:fontFamily="serif"
             android:text="@string/add_trip"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic" />
 
         <TextView
             android:id="@+id/destination"
@@ -42,7 +41,8 @@
             android:text="@string/destination"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ans_dest"
@@ -67,7 +67,8 @@
             android:text="@string/hotel_address"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ans_hotel"
@@ -86,13 +87,14 @@
             android:layout_width="301dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/ans_cc"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/off_white"
             android:fontFamily="serif"
             android:text="@string/city_country"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ans_cc"
@@ -117,7 +119,8 @@
             android:text="@string/start_date"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ans_start"
@@ -136,13 +139,14 @@
             android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/ans_end"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/off_white"
             android:fontFamily="serif"
             android:text="@string/end_date"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ans_end"
@@ -167,13 +171,14 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="25sp"
-            android:typeface="serif" />
+            android:typeface="serif"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/ans_transport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/done_add"
+            android:layout_above="@+id/done_btn"
             android:layout_marginBottom="20dp"
             android:background="@color/off_white"
             android:text="@string/user_input"
@@ -181,19 +186,21 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/done_add"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="65dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/done"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+            android:layout_marginStart="125dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginBottom="60dp"
+            android:background="@color/dark_blue"
+            android:contentDescription="@string/next_btn"
+            android:gravity="center_horizontal"
+            android:text="@string/done_btn"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/bot_bar"
