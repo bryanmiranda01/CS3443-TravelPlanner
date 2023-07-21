@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#96ECEC">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topmargin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_700"
+        />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottommargin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal_700"
+        />
+
+    <TextView
+        android:id="@+id/loginfailed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Login failed"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginfailed"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:text="Username or password is\nincorrect. Please try again."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/signin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:backgroundTint="#BBE5EA"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:shadowColor="#03D9C4"
+        android:text="Next"
+        android:textAlignment="gravity"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
