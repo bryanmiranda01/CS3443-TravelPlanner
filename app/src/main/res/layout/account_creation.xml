@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#96ECEC">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topmargin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_700"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottommargin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal_700"
+        />
+
+    <TextView
+        android:id="@+id/account_creation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:text="Account Creation"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/app_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_creation"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        tools:srcCompat="@drawable/trip_map_icon_foreground" />
+
+    <TextView
+        android:id="@+id/email_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_image"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:text="Please enter your email:"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/userinput_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_prompt"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="Email address"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:id="@+id/password_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinput_email"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:text="Please enter a password:"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/userinput_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_prompt"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:id="@+id/confirm_password_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinput_password"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="50dp"
+        android:text="Confirm password"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:id="@+id/confirm_userinput_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_password_prompt"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="Confirm password"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_userinput_password"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:backgroundTint="#BBE5EA"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:shadowColor="#03D9C4"
+        android:text="Create"
+        android:textAlignment="gravity"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
