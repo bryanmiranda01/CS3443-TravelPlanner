@@ -3,19 +3,19 @@
 This is a class project for the course **CS 3443 Application Programming** in the term _Summer 2023_ at **University of Texas at San Antonio (UTSA)**.
 
 **Instructor:**<br />
-[Instructor name] (github_username) <br />
+John Heaps, Ph.D. (github_username) <br />
 
 **Team Name:** <br />
 The CTRL Freaks
 
 **Team Leader**:<br />
-[Team leader name] (github_username)
+Bryan Miranda ([bryanmiranda01](https://github.com/bryanmiranda01))
 
 **Team Members:** <br />
-[Team member name] (github_username) <br />
-[Team member name] (github_username) <br />
-[Team member name] (github_username) <br />
-[Team member name] (github_username) <br />
+Joe Louie Corporal ([joelouie222](https://github.com/joelouie222)) <br />
+Jeremiah Haywood (github_username) <br />
+Xuancheng "Kevin" Zhou (github_username) <br />
+Meylin Rivas (github_username) <br />
 
 ### Description <br />
 A simple travel planning application written in ***Java*** that will allow a user to consolidate all the information they may need when preparing for a trip. The main feature of this app will allow the user to create a trip itinerary that will allow them to list which activities they want to complete.
