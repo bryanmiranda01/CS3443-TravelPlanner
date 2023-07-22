@@ -14,7 +14,7 @@ Bryan Miranda ([bryanmiranda01](https://github.com/bryanmiranda01))
 **Team Members:** <br />
 Joe Louie Corporal ([joelouie222](https://github.com/joelouie222)) <br />
 Jeremiah Haywood (github_username) <br />
-Xuancheng "Kevin" Zhou (github_username) <br />
+Xuancheng "Kevin" Zhou (chikevinchiXZ) <br />
 Meylin Rivas (github_username) <br />
 
 ### Description <br />
