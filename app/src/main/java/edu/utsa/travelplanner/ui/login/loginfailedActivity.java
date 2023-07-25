@@ -15,7 +15,10 @@ public class loginfailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_failed);
 
+        // Get the back_to_login_button Button widget
         Button goback = findViewById(R.id.back_to_login_button);
+
+        // Set an OnClickListener for the Create Button widget.
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

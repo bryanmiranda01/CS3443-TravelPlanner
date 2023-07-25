@@ -20,6 +20,7 @@
         android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:background="@color/teal_700"
+        android:layout_marginBottom="0dp"
         app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay" />
 
     <TextView

@@ -41,7 +41,7 @@ public class SignUp extends AppCompatActivity {
                     }
 
                     if (!(user_pass.equals(confirm_pass))){
-                        Toast.makeText(SignUp.this, "Password Does Not Math", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUp.this, "Password Does Not Match", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
