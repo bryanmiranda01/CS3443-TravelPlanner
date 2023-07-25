@@ -1,12 +1,20 @@
 package edu.utsa.travelplanner;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.ContentView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -15,6 +23,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
+import edu.utsa.travelplanner.ui.home.HomeLanding;
+import edu.utsa.travelplanner.ui.login.loginfailedActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,41 +35,43 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        // LOGIN LAYOUT
+        setContentView(R.layout.sign_in);
 
-        setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        // Get the EditText widgets for login
+        EditText usernameEditText = findViewById(R.id.username);
+        EditText passwordEditText = findViewById(R.id.password);
+
+        // Get the Button widget
+        Button loginButton = findViewById(R.id.signin_button);
+
+        // Set an OnClickListener for the Button widget.
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                // Get the username and password from the EditText widgets.
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+
+                // Check if the username and password are valid.
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please enter a username and password.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Check if the username and password match the stored values.
+                if (username.equals("user") && password.equals("1234")) {
+                    // Login successful.
+                    // Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, HomeLanding.class);
+                    startActivity(intent);
+                } else {
+                    // Login failed.
+                    //Toast.makeText(MainActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
+                    startActivity(intent);
+                }
             }
         });
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_itinerary, R.id.nav_calendar)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 }
