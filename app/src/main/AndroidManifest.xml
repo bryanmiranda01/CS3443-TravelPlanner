@@ -24,8 +24,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.login.loginfailedActivity"/>
-
         <activity
             android:name=".ui.home.HomeLanding"
             android:exported="true"
@@ -37,7 +35,11 @@
         </activity>
 
         <activity android:name=".ui.newuser.SignUp"/>
+        <activity android:name=".ui.login.loginfailedActivity"/>
         <activity android:name=".ui.login.ForgotPassword"/>
+        <activity android:name=".ui.login.ResetConfirmation"/>
+        <activity android:name=".ui.login.ResetConfirmationFailed"/>
+        <activity android:name=".ui.login.ResetConfirmationSuccess"/>
 
     </application>
 
