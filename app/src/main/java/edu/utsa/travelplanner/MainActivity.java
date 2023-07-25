@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -22,9 +23,12 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 import edu.utsa.travelplanner.ui.home.HomeLanding;
 import edu.utsa.travelplanner.ui.login.loginfailedActivity;
+import edu.utsa.travelplanner.ui.newuser.SignUp;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // Get the Button widget
         Button loginButton = findViewById(R.id.signin_button);
 
-        // Set an OnClickListener for the Button widget.
+        // Set an OnClickListener for the Login Button widget.
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        // Set an OnClickListener for the New User? TextView
+        TextView textView = findViewById(R.id.newuser);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignUp.class);
+                startActivity(intent);
             }
         });
     }
