@@ -37,6 +37,7 @@
         </activity>
 
         <activity android:name=".ui.newuser.SignUp"/>
+        <activity android:name=".ui.login.ForgotPassword"/>
 
     </application>
 
