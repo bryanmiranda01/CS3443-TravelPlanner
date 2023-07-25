@@ -27,6 +27,7 @@ import org.w3c.dom.Text;
 
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 import edu.utsa.travelplanner.ui.home.HomeLanding;
+import edu.utsa.travelplanner.ui.login.ForgotPassword;
 import edu.utsa.travelplanner.ui.login.loginfailedActivity;
 import edu.utsa.travelplanner.ui.newuser.SignUp;
 
@@ -79,11 +80,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Set an OnClickListener for the New User? TextView
-        TextView textView = findViewById(R.id.newuser);
-        textView.setOnClickListener(new View.OnClickListener() {
+        TextView newuser_textview = findViewById(R.id.newuser);
+        newuser_textview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SignUp.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set an OnClickListener for the Forgot Password TextView
+        TextView forgotPW_textview = findViewById(R.id.forgotpw);
+        forgotPW_textview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ForgotPassword.class);
                 startActivity(intent);
             }
         });
