@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginfailed_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#96ECEC">
@@ -53,7 +54,7 @@
         android:textStyle="italic" />
 
     <Button
-        android:id="@+id/signin_button"
+        android:id="@+id/back_to_login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/details"
@@ -63,7 +64,7 @@
         android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
         android:shadowColor="#03D9C4"
-        android:text="Next"
+        android:text="Back"
         android:textAlignment="gravity"
         android:textColor="@color/black" />
 
