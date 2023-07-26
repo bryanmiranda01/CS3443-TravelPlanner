@@ -1,31 +1,22 @@
 package edu.utsa.travelplanner;
 
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.annotation.ContentView;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
+import java.util.List;
 
-import edu.utsa.travelplanner.databinding.ActivityMainBinding;
+
+import edu.utsa.travelplanner.data.AppData;
+import edu.utsa.travelplanner.data.User_Model;
 import edu.utsa.travelplanner.ui.home.HomeLanding;
 import edu.utsa.travelplanner.ui.login.ForgotPassword;
 import edu.utsa.travelplanner.ui.login.loginfailedActivity;
@@ -33,15 +24,61 @@ import edu.utsa.travelplanner.ui.newuser.SignUp;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // LOGIN LAYOUT
         setContentView(R.layout.sign_in);
+
+
+
+
+//=================================== TESTING DATABASE ==========================================================
+        // Get the AppData database instance
+        AppData db = AppData.getInstance(this);
+
+        // Adding some test data to the database
+        db.addUser("user1@email.com", "pw123");
+        db.addUser("user2@gmail.com", "h@ck3rs");
+
+        // Retrieve all of the items from the database.
+        List<User_Model> users = db.getUsers();
+
+        // Print the items to the logcat.
+        for (User_Model person : users) {
+            Log.d("MainActivity", person.toString());
+        }
+
+        // Update items in the database
+        //db.updateUser(1, "GOAT@email.com", "pw123");
+        //db.updateUser(2, "user2@gmail.com", "p@wn3d");
+
+        // Delete items from the database.
+        db.deleteUser(1);
+        db.deleteUser(2);
+
+        // Print the items to the logcat.
+        users.clear();
+        users = db.getUsers();
+        if (users == null)
+        {
+            Log.d("MainActivity", "There are no users in the database.");
+        } else {
+            for (User_Model person : users) {
+                Log.d("MainActivity", person.toString());
+            }
+        }
+
+
+//=====^^^^^^^^^^^^^^^^^^^^^^^^^=========== TESTING DATABASE ========^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^===============
+
+
+
+
+
+
+
 
         // Get the EditText widgets for login
         EditText usernameEditText = findViewById(R.id.username);
