@@ -36,6 +36,7 @@
     <string name="button">Button</string>
 
 <!--\General strings-->
+    <string name="add_trip_btn">Add trip</string>
     <string name="done_btn">Done</string>
     <string name="next_btn">Next</string>
     <string name="return_btn">Return</string>

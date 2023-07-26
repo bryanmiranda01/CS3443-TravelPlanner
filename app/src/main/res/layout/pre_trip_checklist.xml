@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ebebeb">
+
+    <!-- Upper area with color #303030 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030" />
+
+    <!-- Checklist items with spacing and horizontal stretch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkHotelReserved"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Hotel Reserved?"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/checkFlightBooked"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Flight Booked?"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/checkPassportValid"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Passport Valid?"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/checkVisaRequired"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Visa Required?"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <!-- Add/View shopping list items button -->
+    <Button
+        android:id="@+id/buttonAddViewShoppingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add/View Shopping List Items"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Lower area with color #303030 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030" />
+
+</LinearLayout>

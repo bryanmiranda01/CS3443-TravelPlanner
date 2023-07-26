@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/top_block"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_below="@id/top_block"
+        android:layout_above="@+id/button_back"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="6">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Luggage information"
+            android:textSize="24sp"
+            android:background="@drawable/rounded_edittext"
+            android:focusable="false"
+            android:clickable="false"
+            android:cursorVisible="false" />
+
+        <EditText
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Item name:"
+            android:background="@drawable/rounded_edittext" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Description:"
+            android:background="@drawable/rounded_edittext" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Quantity:"
+            android:background="@drawable/rounded_edittext" />
+
+        <EditText
+            android:id="@+id/cost"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Cost:"
+            android:background="@drawable/rounded_edittext" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BACK TO PREVIOUS MENU"
+        android:background="@drawable/rounded_button"
+        android:layout_above="@+id/bottom_block"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <View
+        android:id="@+id/bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

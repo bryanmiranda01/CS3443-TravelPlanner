@@ -226,13 +226,11 @@
             android:translationZ="270dp"
             app:srcCompat="@drawable/itinerary" />
 
-
     </RelativeLayout>
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/button"
-        android:id="@+id/fab"
+        android:contentDescription="@string/add_trip_btn"
+        android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

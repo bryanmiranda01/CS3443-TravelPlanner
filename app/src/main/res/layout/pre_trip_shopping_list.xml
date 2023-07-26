@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ebebeb">
+
+    <!-- Upper area with color #303030 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030" />
+
+    <!-- Shopping List Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping List"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Custom Checkboxes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item 1"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item 2"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item 3"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item 4"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item 5"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="8dp" />
+
+    </LinearLayout>
+
+    <!-- Add More Checkbox Button -->
+    <Button
+        android:id="@+id/buttonAddMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add More"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BACK TO PREVIOUS MENU"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Lower area with color #303030 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#303030" />
+
+</LinearLayout>

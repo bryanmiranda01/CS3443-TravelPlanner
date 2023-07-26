@@ -166,8 +166,8 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="315dp"
-            app:backgroundTint="@color/dark_blue"
-            android:translationZ="135dp"
+            android:backgroundTint="@color/dark_blue"
+            android:translationZ="270dp"
             app:srcCompat="@drawable/back_arrow" />
 
 
