@@ -1,5 +1,6 @@
 package edu.utsa.travelplanner.ui.newuser;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.MainActivity;
 import edu.utsa.travelplanner.R;
+import edu.utsa.travelplanner.ui.login.ResetConfirmation;
+import edu.utsa.travelplanner.ui.login.ResetConfirmationFailed;
 
 public class SignUp extends AppCompatActivity {
 
@@ -43,6 +46,9 @@ public class SignUp extends AppCompatActivity {
                     if (!(user_pass.equals(confirm_pass))){
                         Toast.makeText(SignUp.this, "Password Does Not Match", Toast.LENGTH_SHORT).show();
                         return;
+                    } else {
+                        Intent intent = new Intent(SignUp.this, AccountCreationSuccess.class);
+                        startActivity(intent);
                     }
                 }
             });

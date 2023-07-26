@@ -38,7 +38,7 @@ public class ForgotPassword extends AppCompatActivity {
                     return;
                 }
 
-                if (user_email.equals("exist@email.com")){
+                if (user_email.equals("user@email.com")){
                     Toast.makeText(ForgotPassword.this, "Email Exists", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ForgotPassword.this, ResetConfirmation.class);
                     startActivity(intent);
