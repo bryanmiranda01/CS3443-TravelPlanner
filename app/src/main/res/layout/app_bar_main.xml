@@ -1,256 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/off_white"
+    tools:ignore="LabelFor"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:background="@color/dark_blue"
+        android:fontFamily="monospace"
+        android:text="@string/menu_home"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:translationZ="120dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/upcoming_trips"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.TravelPlanner.AppBarOverlay">
+        android:layout_below="@+id/home_text"
+        android:layout_marginTop="40dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/upcoming_trips"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:id="@+id/loc_placeholder1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upcoming_trips"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_blue"
+        android:text="@string/loc_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_trips" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/loc_placeholder2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loc_placeholder1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_blue"
+        android:text="@string/loc_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder1" />
+
+    <TextView
+        android:id="@+id/loc_placeholder3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loc_placeholder2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_blue"
+        android:text="@string/loc_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder2" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay"
+        tools:layout_editor_absoluteX="-16dp" />
 
-        <TextView
-            android:id="@+id/home_text"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="25dp"
-            android:background="@color/dark_blue"
-            android:fontFamily="monospace"
-            android:text="@string/menu_home"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:textStyle="bold|italic"
-            android:translationZ="120dp" />
+    <TextView
+        android:id="@+id/notif_reminder1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notif_reminder2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_blue"
+        android:text="@string/rem_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminders" />
 
-        <TextView
-            android:id="@+id/upcoming_trips"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/home_text"
-            android:layout_marginTop="0dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/upcoming_trips"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/notif_reminder2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bot_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_blue"
+        android:text="@string/rem_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif_reminder1" />
 
-        <TextView
-            android:id="@+id/loc_placeholder1"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/upcoming_trips"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="-10dp"
-            android:background="@color/light_blue"
-            android:text="@string/loc_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/reminders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notif_reminder1"
+        android:layout_marginTop="250dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/reminder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder3" />
 
-        <TextView
-            android:id="@+id/loc_placeholder2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/loc_placeholder1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="-180dp"
-            android:background="@color/light_blue"
-            android:text="@string/loc_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/loc_placeholder1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/loc_placeholder1"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_trips"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/loc_placeholder3"
-            android:layout_width="244dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/loc_placeholder2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="190dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="100dp"
-            android:background="@color/light_blue"
-            android:text="@string/loc_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/notif_reminder1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/notif_reminder1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminders"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay" />
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/notif_reminder2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/notif_reminder2"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star4"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/notif_reminder1"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/notif_reminder2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="9dp"
-            android:background="@color/light_blue"
-            android:text="@string/rem_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/loc_placeholder2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/loc_placeholder2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/notif_reminder2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/bot_bar"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="40dp"
-            android:background="@color/light_blue"
-            android:text="@string/rem_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/loc_placeholder3"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/loc_placeholder3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star2"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/reminders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/notif_reminder1"
-            android:layout_marginBottom="20dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/reminder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/bot_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
-        <ImageView
-            android:contentDescription="@string/star"
-            android:id="@+id/star1"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignEnd="@+id/loc_placeholder1"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="137dp"
-            android:layout_marginEnd="257dp"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:contentDescription="@string/star"
-            android:id="@+id/star4"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignEnd="@+id/notif_reminder1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="255dp"
-            android:layout_marginBottom="138dp"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:contentDescription="@string/star"
-            android:id="@+id/star5"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignEnd="@+id/notif_reminder2"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="255dp"
-            android:layout_marginBottom="102dp"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:contentDescription="@string/star"
-            android:id="@+id/star2"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignEnd="@+id/loc_placeholder2"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="176dp"
-            android:layout_marginEnd="257dp"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:contentDescription="@string/star"
-            android:id="@+id/star3"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignEnd="@+id/loc_placeholder3"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="211dp"
-            android:layout_marginEnd="257dp"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <TextView
-            android:id="@+id/bot_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/dark_blue" />
-
-        <ImageView
-            android:contentDescription="@string/placeholder"
-            android:id="@+id/sidebar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="360dp"
-            android:translationZ="270dp"
-            app:srcCompat="@drawable/itinerary" />
-
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/sidebar"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/placeholder"
+        android:translationZ="270dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/add_trip_btn"
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="88dp"
+        android:contentDescription="@string/add_trip_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.980"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/add" />
 
-    <ImageView
-        android:contentDescription="@string/placeholder"
-        android:id="@+id/placeholderimage"
-        android:layout_width="212dp"
-        android:layout_height="141dp"
-        app:layout_anchor="@+id/relativeLayout"
-        app:layout_anchorGravity="center"
-        android:src="@drawable/placeholder_image" />
-
     <include
+        android:id="@+id/include"
         layout="@layout/content_main"
         app:layout_anchor="@+id/placeholderimage"
-        app:layout_anchorGravity="center" />
+        app:layout_anchorGravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/placeholderimage"
+        android:contentDescription="@string/placeholder"
+        android:layout_width="190dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder3"
+        app:srcCompat="@drawable/placeholder_image" />
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

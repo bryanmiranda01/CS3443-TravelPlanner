@@ -1,265 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/off_white"
+    tools:ignore="LabelFor"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+
+    <TextView
+        android:id="@+id/itinerary_text"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dark_blue"
+        android:fontFamily="monospace"
+        android:text="@string/menu_itinerary"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        android:translationZ="120dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itin_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.TravelPlanner.AppBarOverlay">
+        android:layout_above="@+id/date_placeholder"
+        android:layout_marginTop="20dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/loc_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itinerary_text" />
 
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/date_placeholder"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bot_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/off_white"
+        android:text="@string/date_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itin_location" />
+
+    <TextView
+        android:id="@+id/act_placeholder5"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_placeholder4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_blue"
+        android:text="@string/act_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_placeholder4" />
+
+    <TextView
+        android:id="@+id/act_placeholder3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_placeholder2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_blue"
+        android:text="@string/act_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_placeholder2" />
+
+    <TextView
+        android:id="@+id/act_placeholder1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_placeholder"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="250dp"
+        android:background="@color/light_blue"
+        android:text="@string/act_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_placeholder" />
+
+    <TextView
+        android:id="@+id/act_placeholder4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_placeholder3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_blue"
+        android:text="@string/act_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_placeholder3" />
+
+    <TextView
+        android:id="@+id/act_placeholder2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_placeholder1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_blue"
+        android:text="@string/act_placeholder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_placeholder1" />
+
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="305dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/act_placeholder1"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itin_location"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/act_placeholder2"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/act_placeholder3"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star2"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/act_placeholder4"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star3"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/act_placeholder5"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star4"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <TextView
+        android:id="@+id/bot_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_placeholder5"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <TextView
-            android:id="@+id/itinerary_text"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="25dp"
-            android:background="@color/dark_blue"
-            android:fontFamily="monospace"
-            android:text="@string/menu_itinerary"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:textStyle="bold|italic"
-            android:translationZ="120dp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="192dp"
+        android:layout_height="169dp"
+        android:layout_above="@+id/act_placeholder1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/act_placeholder1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_placeholder"
+        app:srcCompat="@drawable/placeholder_image" />
 
-        <TextView
-            android:id="@+id/itin_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/date_placeholder"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/loc_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/date_placeholder"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/bot_bar"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="527dp"
-            android:background="@color/off_white"
-            android:text="@string/date_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
-
-
-        <TextView
-            android:id="@+id/act_placeholder1"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/date_placeholder"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="-300dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="44dp"
-            android:background="@color/light_blue"
-            android:text="@string/act_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/act_placeholder2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/act_placeholder1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="-20dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="44dp"
-            android:background="@color/light_blue"
-            android:text="@string/act_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/act_placeholder3"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/act_placeholder2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="-20dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="44dp"
-            android:background="@color/light_blue"
-            android:text="@string/act_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/act_placeholder4"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/act_placeholder3"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="-20dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="208dp"
-            android:background="@color/light_blue"
-            android:text="@string/act_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/act_placeholder5"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/act_placeholder4"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="-180dp"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="250dp"
-            android:background="@color/light_blue"
-            android:text="@string/act_placeholder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/star1"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="591dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="122dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:id="@+id/star2"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="378dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="335dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-
-        <ImageView
-            android:id="@+id/star3"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="535dp"
-            android:layout_marginEnd="344dp"
-            android:layout_marginBottom="178dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:id="@+id/star4"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="483dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="230dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <ImageView
-            android:id="@+id/star5"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="433dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="280dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
-
-        <TextView
-            android:id="@+id/bot_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/dark_blue" />
-
-        <ImageView
-            android:contentDescription="@string/placeholder"
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="117dp"
-            android:layout_above="@+id/act_placeholder1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="360dp"
-            app:srcCompat="@drawable/placeholder_image" />
-
-    </RelativeLayout>
-
+    <ImageButton
+        android:contentDescription="@string/back_btn"
+        android:id="@+id/back_btn"
+        android:layout_width="84dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/dark_blue"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        android:translationZ="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/button"
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/itinerary_text"
+        app:layout_constraintHorizontal_bias="0.980"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848"
         app:srcCompat="@drawable/add" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/button"
         android:id="@+id/fab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="200dp"
+        android:contentDescription="@string/button"
+        app:layout_constraintBottom_toBottomOf="@+id/bot_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.980"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623"
         app:srcCompat="@drawable/luggage" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

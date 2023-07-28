@@ -4,172 +4,146 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white">
+    android:background="@color/off_white"
+    tools:ignore="LabelFor">
 
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-66dp">
+        android:layout_height="50dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/top_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="146dp"
-            android:background="@color/dark_blue" />
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="327dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/dark_blue"
+        android:fontFamily="serif"
+        android:text="@string/select_details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
 
-        <TextView
-            android:id="@+id/select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/selection1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="38dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="50dp"
-            android:background="@color/dark_blue"
-            android:fontFamily="serif"
-            android:text="@string/select_details"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="65dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/selection1"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/selection2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="95dp"
-            android:layout_marginEnd="31dp"
-            android:layout_marginBottom="25dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/trip_details"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="76dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/selection2"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/selection3"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="96dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="25dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/pre_trip_check"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/button1"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star2"
+        app:srcCompat="@android:drawable/star_big_off" />
 
-        <TextView
-            android:id="@+id/selection3"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/nextbutton"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="98dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="100dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/luggage_details"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/bot_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/star1"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="262dp"
-            android:layout_marginEnd="326dp"
-            android:layout_marginBottom="450dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
+    <ImageButton
+        android:contentDescription="@string/back_btn"
+        android:id="@+id/back_btn"
+        android:layout_width="84dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/dark_blue"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/star2"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="381dp"
-            android:layout_marginEnd="326dp"
-            android:layout_marginBottom="331dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/luggage_details"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-        <ImageView
-            android:id="@+id/star3"
-            android:layout_width="20dp"
-            android:layout_height="18dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="324dp"
-            android:layout_marginEnd="328dp"
-            android:layout_marginBottom="388dp"
-            android:contentDescription="@string/star"
-            app:srcCompat="@android:drawable/star_big_off" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/trip_details"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select" />
 
-        <Button
-            android:id="@+id/nextbutton"
-            android:layout_width="182dp"
-            android:layout_height="58dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="115dp"
-            android:layout_marginEnd="115dp"
-            android:layout_marginBottom="165dp"
-            android:background="@color/dark_blue"
-            android:contentDescription="@string/next_btn"
-            android:gravity="center_horizontal"
-            android:text="@string/next_btn"
-            android:textSize="30sp" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/pre_trip_check"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-        <TextView
-            android:id="@+id/bot_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@color/dark_blue"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp" />
-
-        <Button
-            android:id="@+id/back_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="315dp"
-            android:backgroundTint="@color/dark_blue"
-            android:translationZ="270dp"
-            app:srcCompat="@drawable/back_arrow" />
-
-
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

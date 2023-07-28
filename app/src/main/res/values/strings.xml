@@ -39,7 +39,7 @@
     <string name="add_trip_btn">Add trip</string>
     <string name="done_btn">Done</string>
     <string name="next_btn">Next</string>
-    <string name="return_btn">Return</string>
+    <string name="back_btn">Back</string>
     <string name="user_input">user input</string>
     <string name="gen_placeholder">Generic placeholder</string>
     <string name="loc_placeholder">Location placeholder</string>

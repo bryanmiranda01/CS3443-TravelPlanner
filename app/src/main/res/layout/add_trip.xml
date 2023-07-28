@@ -1,215 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white">
+    android:background="@color/off_white"
+    tools:ignore="LabelFor">
 
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/dark_blue"
+        android:contentDescription="@string/back_btn"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="50dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/top_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@color/dark_blue" />
+    <TextView
+        android:id="@+id/add_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/destination"
+        android:layout_marginTop="5dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/add_trip"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
 
-        <TextView
-            android:id="@+id/add_trip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/destination"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/add_trip"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="36sp"
-            android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_dest"
+        android:layout_marginTop="5dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/destination"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_trip" />
 
-        <TextView
-            android:id="@+id/destination"
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_dest"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/destination"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/ans_dest"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/hotel_address"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination" />
 
-        <EditText
-            android:id="@+id/ans_dest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/hotel_address"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/hotel_address"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_hotel"
+        android:layout_marginTop="3dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/hotel_address"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_dest" />
 
-        <TextView
-            android:id="@+id/hotel_address"
-            android:layout_width="314dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_hotel"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/hotel_address"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/ans_hotel"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/city_country"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotel_address" />
 
-        <EditText
-            android:id="@+id/ans_hotel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/city_country"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/city_country"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_cc"
+        android:layout_marginTop="3dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/city_country"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_hotel" />
 
-        <TextView
-            android:id="@+id/city_country"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_cc"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/city_country"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/ans_cc"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/start_date"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_country" />
 
-        <EditText
-            android:id="@+id/ans_cc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/start_date"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_start"
+        android:layout_marginTop="3dp"
+        android:background="@color/off_white"
+        android:fontFamily="serif"
+        android:text="@string/start_date"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_cc" />
 
-        <TextView
-            android:id="@+id/start_date"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_start"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/start_date"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/ans_start"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/end_date"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_date" />
 
-        <EditText
-            android:id="@+id/ans_start"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/end_date"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_end"
+        android:background="@color/off_white"
+        android:layout_marginTop="3dp"
+        android:fontFamily="serif"
+        android:text="@string/end_date"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_start" />
 
-        <TextView
-            android:id="@+id/end_date"
-            android:layout_width="256dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_end"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:fontFamily="serif"
-            android:text="@string/end_date"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/ans_end"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/transport"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/end_date" />
 
-        <EditText
-            android:id="@+id/ans_end"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/transport"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <TextView
+        android:id="@+id/transport"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ans_transport"
+        android:layout_marginTop="3dp"
+        android:background="@color/off_white"
+        android:text="@string/transportation"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_end" />
 
-        <TextView
-            android:id="@+id/transport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/ans_transport"
-            android:layout_marginBottom="10dp"
-            android:background="@color/off_white"
-            android:text="@string/transportation"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:typeface="serif"
-            android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/ans_transport"
+        android:inputType="text"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/done_btn"
+        android:background="@color/off_white"
+        android:text="@string/user_input"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transport" />
 
-        <EditText
-            android:id="@+id/ans_transport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/done_btn"
-            android:layout_marginBottom="20dp"
-            android:background="@color/off_white"
-            android:text="@string/user_input"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/aqua"
+        android:contentDescription="@string/next_btn"
+        android:gravity="center_horizontal"
+        android:text="@string/done_btn"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bot_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/done_btn"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="125dp"
-            android:layout_marginEnd="125dp"
-            android:layout_marginBottom="60dp"
-            android:background="@color/dark_blue"
-            android:contentDescription="@string/next_btn"
-            android:gravity="center_horizontal"
-            android:text="@string/done_btn"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/bot_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/bot_bar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/dark_blue" />
-
-
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
