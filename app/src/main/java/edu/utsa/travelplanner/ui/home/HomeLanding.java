@@ -3,6 +3,9 @@ package edu.utsa.travelplanner.ui.home;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import edu.utsa.travelplanner.DBHelper;
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 
@@ -24,16 +28,19 @@ public class HomeLanding extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
+        setContentView(R.layout.app_bar_main);
         setSupportActionBar(binding.appBarMain.toolbar);
 
 
-        //Working on fab function---------
+        
+
+//        Editing fab function for adding trips--------------------------------------------
         FloatingActionButton fab_add = (FloatingActionButton) findViewById(R.id.fab_add);
         fab_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +49,119 @@ public class HomeLanding extends AppCompatActivity {
                         .setAction("Trip", null).show();
             }
         });
-        //---------
+
+
+
+//        Working on travel details database------------------------------------------------------
+        EditText ans_dest, ans_hotel, ans_cc, ans_start, ans_end, ans_transp;
+        Button done_itin;
+        //update_itin, delete_itin, view_itin;
+        DBHelper DB;
+
+        ans_dest = findViewById(R.id.ans_dest);
+        ans_hotel = findViewById(R.id.ans_hotel);
+        ans_cc = findViewById(R.id.ans_cc);
+        ans_start = findViewById(R.id.ans_start);
+        ans_end = findViewById(R.id.ans_end);
+        ans_transp = findViewById(R.id.ans_transp);
+
+        //Adds information to create new trip
+        done_itin = findViewById(R.id.done_itin);
+
+        DB = new DBHelper(this);
+
+        done_itin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               String ans_destTXT = ans_dest.getText().toString();
+               String ans_hotelTXT = ans_hotel.getText().toString();
+               String ans_ccTXT = ans_cc.getText().toString();
+               String ans_startTXT = ans_start.getText().toString();
+               String ans_endTXT = ans_end.getText().toString();
+               String ans_transpTXT = ans_transp.getText().toString();
+
+               Boolean checkinsertdata = DB.insertuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
+
+               if(checkinsertdata==true)
+                   Toast.makeText(HomeLanding.this,"New trip added", Toast.LENGTH_SHORT).show();
+               else
+                   Toast.makeText(HomeLanding.this,"New trip was not added", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        /*
+        //Update information, still debating adding this at all
+        update_itin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ans_destTXT = ans_dest.getText().toString();
+                String ans_hotelTXT = ans_hotel.getText().toString();
+                String ans_ccTXT = ans_cc.getText().toString();
+                String ans_startTXT = ans_start.getText().toString();
+                String ans_endTXT = ans_end.getText().toString();
+                String ans_transpTXT = ans_transp.getText().toString();
+
+                Boolean checkupdatedata = DB.updateuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
+
+                if(checkupdatedata==true)
+                    Toast.makeText(HomeLanding.this,"Trip information updated", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(HomeLanding.this,"Trip information was not updated", Toast.LENGTH_SHORT).show();
+            }
+        });
+        */
+
+        /*
+        //Delete information, still deciding where to add this
+
+        delete_itin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ans_destTXT = ans_dest.getText().toString();
+
+                Boolean checkdeletedata = DB.deletedata(ans_destTXT);
+
+                if(checkdeletedata==true)
+                    Toast.makeText(HomeLanding.this,"Trip deleted", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(HomeLanding.this,"Trip was not deleted", Toast.LENGTH_SHORT).show();
+            }
+        });
+        */
+
+
+        /* Need to move to trip details view when finished
+        view_itin.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Cursor res = DB.getdata();
+                if(res.getCount()==0) {
+                    Toast.makeText(HomeLanding.this,"No entry exists", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                StringBuffer buffer = new StringBuffer();
+                while(res.moveToNext()){
+                    buffer.append("Destination :" + res.getString(0)+"\n");
+                    buffer.append("Hotel address :" + res.getString(1)+"\n\n");
+                    buffer.append("City/Country :" + res.getString(2)+"\n\n\n");
+                    buffer.append("Start date :" + res.getString(3)+"\n\n\n\n");
+                    buffer.append("End date :" + res.getString(4)+"\n\n\n\n\n");
+                    buffer.append("Mode of transportation :" + res.getString(5)+"\n\n\n\n\n\n");
+
+                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(HomeLanding.this);
+                builder.setCancelable(true);
+                builder.setTitle("Trips details");
+                builder.setMessage(buffer.toString());
+                builder.show();
+            }
+        });
+        */
+
+//        -------------------------------------------------------------------------------------
+
+
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -56,6 +175,8 @@ public class HomeLanding extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
