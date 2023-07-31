@@ -65,7 +65,7 @@ public class AppData extends SQLiteOpenHelper {
     public void updateUser(int id, String email, String password) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("name", email);
+        values.put("email", email);
         values.put("password", password);
         db.update("users", values, "id = ?", new String[]{String.valueOf(id)});
     }
