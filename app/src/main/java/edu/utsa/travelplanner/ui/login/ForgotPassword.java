@@ -9,8 +9,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import edu.utsa.travelplanner.MainActivity;
 import edu.utsa.travelplanner.R;
+import edu.utsa.travelplanner.data.AppData;
+import edu.utsa.travelplanner.data.User_Model;
 import edu.utsa.travelplanner.ui.newuser.SignUp;
 
 public class ForgotPassword extends AppCompatActivity {
@@ -20,9 +24,15 @@ public class ForgotPassword extends AppCompatActivity {
         // Password Reset View
         setContentView(R.layout.password_reset);
 
+        // Get APP DATABASE
+        AppData db = AppData.getInstance(this);
+
+        // GETTING ALL USERS IN APP DATABASE
+        List<User_Model> users = db.getUsers();
+
+
         // Get the EditText widgets for email address
         EditText userinput_EditText = findViewById(R.id.userinput);
-
 
         // Get the next Button widget
         Button nextButton = findViewById(R.id.next);
@@ -38,15 +48,17 @@ public class ForgotPassword extends AppCompatActivity {
                     return;
                 }
 
-                if (user_email.equals("user@email.com")){
-                    Toast.makeText(ForgotPassword.this, "Email Exists", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ForgotPassword.this, ResetConfirmation.class);
-                    startActivity(intent);
-                } else {
+                if (users != null ){
+                    for (User_Model person : users) {
+                        if (user_email.equals(person.getEmail())){
+                            Toast.makeText(ForgotPassword.this, "Email Exists", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(ForgotPassword.this, ResetConfirmation.class);
+                            startActivity(intent);
+                        }
+                    }
                     Toast.makeText(ForgotPassword.this, "This email does not match in our records.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
             }
         });
     }
