@@ -23,10 +23,10 @@ public class CreateTrip extends AppCompatActivity {
     EditText city_country = findViewById(R.id.ans_cc);
     EditText start_date = findViewById(R.id.ans_start);
     EditText end_date = findViewById(R.id.ans_end);
-    EditText transport = findViewById(R.id.ans_transport);
+    EditText transport = findViewById(R.id.ans_transp);
 
     //Button implementation
-    Button doneButton = findViewById(R.id.done_btn);
+    Button doneButton = findViewById(R.id.done_itin);
     doneButton.setOnClickListener(new View.OnClickListener() {
 
         @Override
@@ -42,8 +42,7 @@ public class CreateTrip extends AppCompatActivity {
             if (dest.isEmpty() || address.isEmpty() || cc.isEmpty()
                     || start.isEmpty() || end.isEmpty() || transp.isEmpty()) {
 
-                Toast.makeText(CreateTrip.this, "Please fill all the fields below", Toast.LENGTH_SHORT).show();
-                return;
+                Toast.makeText(CreateTrip.this, "Please complete all the fields listed", Toast.LENGTH_SHORT).show();
             }
         }
         });

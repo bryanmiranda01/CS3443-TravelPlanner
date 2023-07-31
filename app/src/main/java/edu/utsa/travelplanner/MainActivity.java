@@ -76,10 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         // Get the EditText widgets for login
         EditText usernameEditText = findViewById(R.id.username);
         EditText passwordEditText = findViewById(R.id.password);

@@ -8,7 +8,7 @@
     tools:ignore="LabelFor">
 
     <ImageButton
-        android:id="@+id/back_btn"
+        android:id="@+id/back_itin"
         android:layout_width="84dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -215,7 +215,7 @@
         android:id="@+id/transport"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_transport"
+        android:layout_above="@+id/ans_transp"
         android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:text="@string/transportation"
@@ -229,11 +229,11 @@
         app:layout_constraintTop_toBottomOf="@+id/ans_end" />
 
     <EditText
-        android:id="@+id/ans_transport"
+        android:id="@+id/ans_transp"
         android:inputType="text"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/done_btn"
+        android:layout_above="@+id/done_itin"
         android:background="@color/off_white"
         android:text="@string/user_input"
         android:textAlignment="center"
@@ -244,7 +244,7 @@
         app:layout_constraintTop_toBottomOf="@+id/transport" />
 
     <Button
-        android:id="@+id/done_btn"
+        android:id="@+id/done_itin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
