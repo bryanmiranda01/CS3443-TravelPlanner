@@ -2,6 +2,7 @@ package edu.utsa.travelplanner.ui.home;
 
 public class Trip {
 
+    private int tripid;
     private String destination;
     private String address;
     private String cc;
@@ -9,8 +10,11 @@ public class Trip {
     private String end;
     private String transport;
 
+
+
 //    Constructor
-    public Trip(String destination, String address, String cc, String start, String end, String transport) {
+    public Trip(int tripid, String destination, String address, String cc, String start, String end, String transport) {
+        this.tripid = tripid;
         this.destination = destination;
         this.address = address;
         this.cc = cc;
@@ -20,6 +24,10 @@ public class Trip {
 
     }
 
+    // Get/set trip id
+    public int getTripId(){ return tripid; }
+    public void setTripId(int tripId) {this.tripid = tripid; }
+
     //    Get/set destination
     public String getDestination() {
         return destination;
@@ -28,7 +36,7 @@ public class Trip {
         this.destination = destination;
     }
 
-//    Get/set city and country
+    //    Get/set city and country
     public String getCc() {
         return cc;
     }
@@ -36,7 +44,7 @@ public class Trip {
         this.cc = cc;
     }
 
-//    Get/set hotel address
+    //    Get/set hotel address
     public String getAddress() {
         return address;
     }
@@ -44,7 +52,7 @@ public class Trip {
         this.address = address;
     }
 
-//    Get/set start date
+    //    Get/set start date
     public String getStart() {
         return start;
     }
@@ -52,7 +60,7 @@ public class Trip {
         this.start = start;
     }
 
-//    Get/set end date
+    //    Get/set end date
     public String getEnd() {
         return end;
     }
@@ -60,7 +68,7 @@ public class Trip {
         this.end = end;
     }
 
-//    Get/set mode of transportation
+    //    Get/set mode of transportation
     public String getTransport() {
         return transport;
     }

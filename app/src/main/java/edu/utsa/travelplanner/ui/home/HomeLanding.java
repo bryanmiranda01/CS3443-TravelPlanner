@@ -18,7 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-import edu.utsa.travelplanner.DBHelper;
+import edu.utsa.travelplanner.TripData;
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 
@@ -29,12 +29,12 @@ public class HomeLanding extends AppCompatActivity {
     private ActivityMainBinding binding;
 
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.app_bar_main);
+        setContentView(binding.getRoot());
         setSupportActionBar(binding.appBarMain.toolbar);
 
 
@@ -52,11 +52,15 @@ public class HomeLanding extends AppCompatActivity {
 
 
 
-//        Working on travel details database------------------------------------------------------
+/*        Working on travel details database------------------------------------------------------
+
+
+
+
         EditText ans_dest, ans_hotel, ans_cc, ans_start, ans_end, ans_transp;
         Button done_itin;
         //update_itin, delete_itin, view_itin;
-        DBHelper DB;
+        TripData DB;
 
         ans_dest = findViewById(R.id.ans_dest);
         ans_hotel = findViewById(R.id.ans_hotel);
@@ -68,7 +72,7 @@ public class HomeLanding extends AppCompatActivity {
         //Adds information to create new trip
         done_itin = findViewById(R.id.done_itin);
 
-        DB = new DBHelper(this);
+        DB = new TripData(this);
 
         done_itin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,8 +84,6 @@ public class HomeLanding extends AppCompatActivity {
                String ans_endTXT = ans_end.getText().toString();
                String ans_transpTXT = ans_transp.getText().toString();
 
-               Boolean checkinsertdata = DB.insertuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
-
                if(checkinsertdata==true)
                    Toast.makeText(HomeLanding.this,"New trip added", Toast.LENGTH_SHORT).show();
                else
@@ -89,8 +91,9 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
-        /*
-        //Update information, still debating adding this at all
+        // Update information, add this function to trip details screen
+
+
         update_itin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,10 +112,9 @@ public class HomeLanding extends AppCompatActivity {
                     Toast.makeText(HomeLanding.this,"Trip information was not updated", Toast.LENGTH_SHORT).show();
             }
         });
-        */
 
-        /*
-        //Delete information, still deciding where to add this
+
+        // Move this to add trips file, add a button to delete from that screen
 
         delete_itin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,10 +129,11 @@ public class HomeLanding extends AppCompatActivity {
                     Toast.makeText(HomeLanding.this,"Trip was not deleted", Toast.LENGTH_SHORT).show();
             }
         });
-        */
+        //
 
 
-        /* Need to move to trip details view when finished
+        // Move this file to view trips class
+
         view_itin.setOnClickListener(new View.OnClickListener() {
 
             @Override
