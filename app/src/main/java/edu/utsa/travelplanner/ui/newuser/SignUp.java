@@ -9,8 +9,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import edu.utsa.travelplanner.MainActivity;
 import edu.utsa.travelplanner.R;
+import edu.utsa.travelplanner.data.AppData;
+import edu.utsa.travelplanner.data.User_Model;
 import edu.utsa.travelplanner.ui.login.ResetConfirmation;
 import edu.utsa.travelplanner.ui.login.ResetConfirmationFailed;
 
@@ -18,6 +22,9 @@ public class SignUp extends AppCompatActivity {
 
         protected void onCreate (Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
+
+            // Get APP DATABASE
+            AppData db = AppData.getInstance(this);
 
             // Account Creation View
             setContentView(R.layout.account_creation);
@@ -47,6 +54,9 @@ public class SignUp extends AppCompatActivity {
                         Toast.makeText(SignUp.this, "Password Does Not Match", Toast.LENGTH_SHORT).show();
                         return;
                     } else {
+                        // ADD USER TO THE USER TABLE in APP DATABASE
+                        db.addUser(user_email, user_pass);
+
                         Intent intent = new Intent(SignUp.this, AccountCreationSuccess.class);
                         startActivity(intent);
                     }
