@@ -10,7 +10,7 @@ public class CalendarViewModel extends ViewModel {
 
     public CalendarViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is calendar fragment");
     }
 
     public LiveData<String> getText() {
