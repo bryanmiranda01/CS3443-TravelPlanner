@@ -31,50 +31,16 @@ public class MainActivity extends AppCompatActivity {
         // LOGIN LAYOUT
         setContentView(R.layout.sign_in);
 
-
-
-
-//=================================== TESTING DATABASE ==========================================================
-        // Get the AppData database instance
+        // Getting APP DATABASE
         AppData db = AppData.getInstance(this);
 
-        // Adding some test data to the database
-        db.addUser("user1@email.com", "pw123");
-        db.addUser("user2@gmail.com", "h@ck3rs");
-
-        // Retrieve all of the items from the database.
+        // GETTING ALL USERS IN APP DATABASE
         List<User_Model> users = db.getUsers();
 
-        // Print the items to the logcat.
-        for (User_Model person : users) {
-            Log.d("MainActivity", person.toString());
+        // Adding some test data to the database in case there are no user data
+        if (users == null) {
+            db.addUser("test", "test");
         }
-
-        // Update items in the database
-        //db.updateUser(1, "GOAT@email.com", "pw123");
-        //db.updateUser(2, "user2@gmail.com", "p@wn3d");
-
-        // Delete items from the database.
-        db.deleteUser(1);
-        db.deleteUser(2);
-
-        // Print the items to the logcat.
-        users.clear();
-        users = db.getUsers();
-        if (users == null)
-        {
-            Log.d("MainActivity", "There are no users in the database.");
-        } else {
-            for (User_Model person : users) {
-                Log.d("MainActivity", person.toString());
-            }
-        }
-
-
-//=====^^^^^^^^^^^^^^^^^^^^^^^^^=========== TESTING DATABASE ========^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^===============
-
-
-
 
         // Get the EditText widgets for login
         EditText usernameEditText = findViewById(R.id.username);
@@ -98,16 +64,28 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Check if the username and password match the stored values.
-                if (username.equals("user") && password.equals("1234")) {
-                    // Login successful.
-                    // Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, HomeLanding.class);
-                    startActivity(intent);
+                if (users == null)
+                {
+                    Log.d("MainActivity", "There are no users in the database.");
                 } else {
+                    for (User_Model person : users) {
+                        if (username.equals(person.getEmail()) && password.equals(person.getPassword())) {
+                            // Login successful.
+                            // Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
+                            Log.d("LOGIN SUCCESS", "LOGIN SUCCESS");
+                            Log.d("DB email: ", person.getEmail());
+                            Log.d("DB pass:", person.getPassword());
+                            Intent intent = new Intent(MainActivity.this, HomeLanding.class);
+                            startActivity(intent);
+                        }
+                    }
                     // Login failed.
                     //Toast.makeText(MainActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
-                    startActivity(intent);
+                    Log.d("LOGIN FAILED", "LOGIN FAILED");
+                    Log.d("DB COUNT:", db.toString());
+//                    Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
+//                    startActivity(intent);
+
                 }
             }
         });
