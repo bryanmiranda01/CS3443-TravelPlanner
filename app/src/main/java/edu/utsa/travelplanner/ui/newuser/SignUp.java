@@ -33,6 +33,7 @@ public class SignUp extends AppCompatActivity {
             EditText user_email_EditText = findViewById(R.id.userinput_email);
             EditText user_pass_EditText = findViewById(R.id.userinput_password);
             EditText confirm_pass_EditText = findViewById(R.id.confirm_userinput_password);
+            EditText userpin_EditText = findViewById(R.id.userpin);
 
             // Get the Create Button widget
             Button createButton = findViewById(R.id.create_button);
@@ -44,6 +45,7 @@ public class SignUp extends AppCompatActivity {
                     String user_email = user_email_EditText.getText().toString();
                     String user_pass = user_pass_EditText.getText().toString();
                     String confirm_pass = confirm_pass_EditText.getText().toString();
+                    String user_pin = userpin_EditText.getText().toString();
 
                     if (user_email.isEmpty() || user_pass.isEmpty() || confirm_pass.isEmpty()) {
                         Toast.makeText(SignUp.this, "You cannot leave any field empty.", Toast.LENGTH_SHORT).show();
@@ -55,7 +57,7 @@ public class SignUp extends AppCompatActivity {
                         return;
                     } else {
                         // ADD USER TO THE USER TABLE in APP DATABASE
-                        db.addUser(user_email, user_pass);
+                        db.addUser(user_email, user_pass, user_pin);
 
                         Intent intent = new Intent(SignUp.this, AccountCreationSuccess.class);
                         startActivity(intent);

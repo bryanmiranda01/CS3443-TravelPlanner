@@ -1,152 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     android:background="#96ECEC">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/topmargin"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/teal_700"
-        />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/bottommargin"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/teal_700"
-        />
-
-    <TextView
-        android:id="@+id/account_creation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="center"
-        android:text="Account Creation"
+    <EditText
+        android:id="@+id/confirm_userinput_password"
+        android:layout_width="365dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
         android:textColor="@color/black"
-        android:textSize="35sp"
-        android:textStyle="bold|italic" />
+        android:textColorHint="@color/black"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_prompt" />
 
-    <ImageView
-        android:id="@+id/app_image"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/userinput_email"
+        android:layout_width="365dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="Email address"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_prompt" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/account_creation"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        tools:srcCompat="@drawable/trip_map_icon_foreground" />
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#BBE5EA"
+        android:gravity="center_horizontal"
+        android:shadowColor="#03D9C4"
+        android:text="Create"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bottommargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userpin" />
 
     <TextView
         android:id="@+id/email_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/app_image"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
         android:text="Please enter your email:"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic"/>
-
-    <EditText
-        android:id="@+id/userinput_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/email_prompt"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/white"
-        android:gravity="start"
-        android:hint="Email address"
-        android:padding="20dp"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_creation" />
 
     <TextView
         android:id="@+id/password_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/userinput_email"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
         android:text="Please enter a password:"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic"/>
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userinput_email" />
 
     <EditText
         android:id="@+id/userinput_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password_prompt"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="365dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:gravity="start"
         android:hint="Password"
+        android:inputType="textPassword"
         android:padding="20dp"
         android:textAlignment="viewStart"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_prompt" />
 
     <TextView
         android:id="@+id/confirm_password_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/userinput_password"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:inputType=""
         android:text="Confirm password"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic"/>
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userinput_password" />
+
+    <TextView
+        android:id="@+id/account_creation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Account Creation"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topmargin" />
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topmargin"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bottommargin"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/securitypin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enter a security pin"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_userinput_password" />
 
     <EditText
-        android:id="@+id/confirm_userinput_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/confirm_password_prompt"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/userpin"
+        android:layout_width="365dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:gravity="start"
-        android:hint="Confirm password"
+        android:hint="4-digit pin"
+        android:inputType="textPassword"
         android:padding="20dp"
         android:textAlignment="viewStart"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/securitypin" />
 
-    <Button
-        android:id="@+id/create_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/confirm_userinput_password"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="150dp"
-        android:backgroundTint="#BBE5EA"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:shadowColor="#03D9C4"
-        android:text="Create"
-        android:textAlignment="gravity"
-        android:textColor="@color/black" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
