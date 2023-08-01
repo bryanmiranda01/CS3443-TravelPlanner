@@ -1,6 +1,7 @@
 package edu.utsa.travelplanner;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,15 +32,20 @@ public class MainActivity extends AppCompatActivity {
         // LOGIN LAYOUT
         setContentView(R.layout.sign_in);
 
+        // Delete Old Database (USE WHEN YOU CHANGED THE DATABASE SCHEMA)
+//        Context context = getApplicationContext();
+//        context.deleteDatabase("travelplanner.db");
+
         // Getting APP DATABASE
         AppData db = AppData.getInstance(this);
+
 
         // GETTING ALL USERS IN APP DATABASE
         List<User_Model> users = db.getUsers();
 
         // Adding some test data to the database in case there are no user data
         if (users == null) {
-            db.addUser("test", "test");
+            db.addUser("test", "test", "1234");
         }
 
         // Get the EditText widgets for login
@@ -56,12 +62,16 @@ public class MainActivity extends AppCompatActivity {
                 // Get the username and password from the EditText widgets.
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
+                boolean authenticated = false;
 
                 // Check if the username and password are valid.
                 if (username.isEmpty() || password.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter a username and password.", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                // GETTING ALL USERS IN APP DATABASE
+                List<User_Model> users = db.getUsers();
 
                 // Check if the username and password match the stored values.
                 if (users == null)
@@ -72,20 +82,19 @@ public class MainActivity extends AppCompatActivity {
                         if (username.equals(person.getEmail()) && password.equals(person.getPassword())) {
                             // Login successful.
                             // Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
-                            Log.d("LOGIN SUCCESS", "LOGIN SUCCESS");
-                            Log.d("DB email: ", person.getEmail());
-                            Log.d("DB pass:", person.getPassword());
-                            Intent intent = new Intent(MainActivity.this, HomeLanding.class);
-                            startActivity(intent);
+                            authenticated = true;
                         }
                     }
-                    // Login failed.
-                    //Toast.makeText(MainActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
-                    Log.d("LOGIN FAILED", "LOGIN FAILED");
-                    Log.d("DB COUNT:", db.toString());
-//                    Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
-//                    startActivity(intent);
 
+                    if (authenticated){
+                        Intent intent = new Intent(MainActivity.this, HomeLanding.class);
+                        startActivity(intent);
+                    } else {
+                        // Login failed.
+                        //Toast.makeText(MainActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, loginfailedActivity.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
