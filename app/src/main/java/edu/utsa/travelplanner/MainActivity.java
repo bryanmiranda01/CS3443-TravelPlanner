@@ -4,6 +4,7 @@ package edu.utsa.travelplanner;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // GETTING ALL USERS IN APP DATABASE
                 List<User_Model> users = db.getUsers();
+                User_Model authenticated_user = null;
 
                 // Check if the username and password match the stored values.
                 if (users == null)
@@ -83,11 +85,14 @@ public class MainActivity extends AppCompatActivity {
                             // Login successful.
                             // Toast.makeText(MainActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
                             authenticated = true;
+                            authenticated_user = person;
+                            break;
                         }
                     }
 
                     if (authenticated){
                         Intent intent = new Intent(MainActivity.this, HomeLanding.class);
+                        intent.putExtra("authenticated_user", (Parcelable) authenticated_user);
                         startActivity(intent);
                     } else {
                         // Login failed.

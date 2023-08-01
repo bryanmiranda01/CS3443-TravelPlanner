@@ -2,6 +2,7 @@ package edu.utsa.travelplanner.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,7 @@ public class ForgotPassword extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String user_email = userinput_EditText.getText().toString();
+                boolean user_found = false;
 
                 if (user_email.isEmpty()) {
                     Toast.makeText(ForgotPassword.this, "You cannot leave you email empty.", Toast.LENGTH_SHORT).show();
@@ -52,12 +54,24 @@ public class ForgotPassword extends AppCompatActivity {
                     for (User_Model person : users) {
                         if (user_email.equals(person.getEmail())){
                             Toast.makeText(ForgotPassword.this, "Email Exists", Toast.LENGTH_SHORT).show();
+
+                            user_found = true;
+
                             Intent intent = new Intent(ForgotPassword.this, ResetConfirmation.class);
+
+                            // Passing the user's User_Model to ResetConfirmation Activity
+                            intent.putExtra("user_account", person);
+
                             startActivity(intent);
                         }
                     }
-                    Toast.makeText(ForgotPassword.this, "This email does not match in our records.", Toast.LENGTH_SHORT).show();
-                    return;
+
+                    if (!(user_found)){
+                        Toast.makeText(ForgotPassword.this, "This email does not match in our records.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+
                 }
             }
         });
