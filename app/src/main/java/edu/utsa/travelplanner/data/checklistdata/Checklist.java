@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner.ui.itinerary.checklist;
+package edu.utsa.travelplanner.data.checklistdata;
 
 public class Checklist {
 
@@ -8,7 +8,7 @@ public class Checklist {
     private boolean passportValid;
     private boolean visaRequired;
     
-    //shopping list needs to store [String, String, Boolean]
+    //shopping list variable needs to store [String, String, Boolean] or make a separate class for it
     public Checklist(int checklistId, boolean hotelReserved, boolean transportBooked, boolean passportValid, boolean visaRequired){
         this.checklistId = checklistId;
         this.hotelReserved = hotelReserved;

@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
-import edu.utsa.travelplanner.TripData;
+import edu.utsa.travelplanner.data.tripdata.TripData;
 
 //Class allows user to input new trip information
 public class AddTrip extends AppCompatActivity {
@@ -59,7 +59,7 @@ public class AddTrip extends AppCompatActivity {
     });
     }
 
-    //Sends user back to homelanding page
+    //Back button to homelanding page
     private void setupBackButton() {
         Imagebutton = (ImageButton) findViewById(R.id.back_itin);
 

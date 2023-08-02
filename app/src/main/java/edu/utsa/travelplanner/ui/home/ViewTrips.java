@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 import edu.utsa.travelplanner.R;
-import edu.utsa.travelplanner.TripData;
+import edu.utsa.travelplanner.data.tripdata.Trip;
+import edu.utsa.travelplanner.data.tripdata.TripData;
 
 public class ViewTrips extends AppCompatActivity {
 
