@@ -56,7 +56,7 @@ public class TripData extends SQLiteOpenHelper {
     }
 
     //Adding trip information
-    public void insertuserdata(String ans_dest, String ans_hotel, String ans_cc, String ans_start,
+    public void insertTripData(String ans_dest, String ans_hotel, String ans_cc, String ans_start,
                                String ans_end, String ans_transp) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -74,7 +74,7 @@ public class TripData extends SQLiteOpenHelper {
 
 
     //Updating trip information
-    public void updateuserdata(int tripid, String ans_dest, String ans_hotel, String ans_cc, String ans_start,
+    public void updateTripData(int tripid, String ans_dest, String ans_hotel, String ans_cc, String ans_start,
                                String ans_end, String ans_transp) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -92,7 +92,7 @@ public class TripData extends SQLiteOpenHelper {
     }
 
     //Deleting trip information
-    public void deletedata(int tripid) {
+    public void deleteTripData(int tripid) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
 
@@ -104,12 +104,7 @@ public class TripData extends SQLiteOpenHelper {
 /*
 
     // Display function
-
-    Cursor data
-   data = mydatabasereference.showData();//Show the board database
-           data.moveToFirst();//point the location to first instance of data
-           String text_data = (data.getString(1)));//Gets the string data
-           mytextbox.setText(text_data);
+        WIP
 
 }
 
