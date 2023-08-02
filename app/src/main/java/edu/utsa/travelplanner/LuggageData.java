@@ -1,4 +1,11 @@
 package edu.utsa.travelplanner;
 
-public class LuggageData {
+import android.content.Context;
+
+import edu.utsa.travelplanner.data.AppData;
+
+public class LuggageData extends AppData {
+    public LuggageData(Context context) {
+        super(context);
+    }
 }

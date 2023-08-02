@@ -12,7 +12,6 @@ import java.util.List;
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.TripData;
 
-
 public class ViewTrips extends AppCompatActivity {
 
     public Button button;
@@ -22,8 +21,8 @@ public class ViewTrips extends AppCompatActivity {
         setContentView(R.layout.view_trips);
         setupBackButton();
 
-        TripData DB = TripData.getInstance(this);
-        List<Trip>  details = DB.getDetails();
+        TripData db = TripData.getInstance(this);
+        List<Trip> details = db.getDetails();
 
         /*View trip destination , add this to view trips screen
 

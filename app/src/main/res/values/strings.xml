@@ -19,7 +19,7 @@
     <string name="add_trip">Add trip</string>
     <string name="destination">-Destination:</string>
     <string name="hotel_address">-Hotel Address:</string>
-    <string name="city_country">-City/Counter:</string>
+    <string name="city_country">-City/Country:</string>
     <string name="start_date">-Start date:</string>
     <string name="end_date">-End date:</string>
     <string name="transportation">-Mode of transportation:</string>

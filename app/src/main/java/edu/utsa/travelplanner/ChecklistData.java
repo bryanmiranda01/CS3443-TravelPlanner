@@ -1,4 +1,11 @@
 package edu.utsa.travelplanner;
 
-public class ChecklistData {
+import android.content.Context;
+
+import edu.utsa.travelplanner.data.AppData;
+
+public class ChecklistData extends AppData {
+    public ChecklistData(Context context) {
+        super(context);
+    }
 }

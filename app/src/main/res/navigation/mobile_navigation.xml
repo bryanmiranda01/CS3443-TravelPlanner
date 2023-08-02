@@ -6,20 +6,18 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@id/nav_home"
         android:name="edu.utsa.travelplanner.ui.home.HomeFragment"
-        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_itinerary"
         android:name="edu.utsa.travelplanner.ui.itinerary.ItineraryFragment"
-        android:label="@string/menu_itinerary"
         tools:layout="@layout/fragment_itinerary" />
 
     <fragment
         android:id="@+id/nav_calendar"
         android:name="edu.utsa.travelplanner.ui.calendar.CalendarFragment"
-        android:label="@string/menu_calendar"
         tools:layout="@layout/fragment_calendar" />
+
 </navigation>
