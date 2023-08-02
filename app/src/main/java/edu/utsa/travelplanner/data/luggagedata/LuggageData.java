@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner;
+package edu.utsa.travelplanner.data.luggagedata;
 
 import android.content.Context;
 

@@ -44,8 +44,8 @@
         <activity android:name=".ui.newuser.AccountCreationSuccess"/>
 
         <activity android:name=".ui.home.AddTrip"/>
-        <activity android:name=".ui.home.Trip"/>
-        <activity android:name=".TripData"/>
+        <activity android:name=".data.tripdata.Trip"/>
+        <activity android:name=".data.tripdata.TripData"/>
 
     </application>
 

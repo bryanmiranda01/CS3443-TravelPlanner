@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,36 +20,22 @@ public class TripDetails extends AppCompatActivity {
 
         setContentView(R.layout.activity_trip_details);
         setupBackButton();
-
     }
-        /* View ALL trip information, add this function to the trips details screen
 
-        view_itin.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Cursor res = DB.getdata();
-                if(res.getCount()==0) {
-                    Toast.makeText(HomeLanding.this,"No entry exists", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-                    buffer.append("Destination :" + res.getString(0)+"\n");
+    /*
+    TextView txtDest = (TextView) findViewById(R.id.textDestination);
+    TextView txtAddress = (TextView) findViewById(R.id.textHotelAddress);
+    TextView txtVisit = (TextView) findViewById(R.id.textCitiesWillVisit);
+    TextView txtStart = (TextView) findViewById(R.id.textStartDate);
+    TextView txtEnd = (TextView) findViewById(R.id.textEndDate);
+    TextView txtTransp = (TextView) findViewById(R.id.textTransportation);
 
 
-                }
-                AlertDialog.Builder builder = new AlertDialog.Builder(HomeLanding.this);
-                builder.setCancelable(true);
-                builder.setTitle("Trips details");
-                builder.setMessage(buffer.toString());
-                builder.show();
-            }
-        });
+     */
 
 
+/*
     // Update information, add this function to trip details screen
-
 
         update_itin.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -60,7 +47,7 @@ public class TripDetails extends AppCompatActivity {
             String ans_endTXT = ans_end.getText().toString();
             String ans_transpTXT = ans_transp.getText().toString();
 
-            Boolean checkupdatedata = DB.updateuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
+            Boolean checkupdatedata = db.updateuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
 
             if(checkupdatedata==true)
                 Toast.makeText(HomeLanding.this,"Trip information updated", Toast.LENGTH_SHORT).show();
@@ -69,7 +56,6 @@ public class TripDetails extends AppCompatActivity {
         }
     });
 
-
     // Delete information, add this function to trip details screen
 
         delete_itin.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +63,7 @@ public class TripDetails extends AppCompatActivity {
         public void onClick(View v) {
             String ans_destTXT = ans_dest.getText().toString();
 
-            Boolean checkdeletedata = DB.deletedata(ans_destTXT);
+            Boolean checkdeletedata = db.deletedata(ans_destTXT);
 
             if(checkdeletedata==true)
                 Toast.makeText(HomeLanding.this,"Trip deleted", Toast.LENGTH_SHORT).show();

@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner.ui.home;
+package edu.utsa.travelplanner.data.tripdata;
 
 public class Trip {
 

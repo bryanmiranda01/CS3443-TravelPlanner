@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner.ui.itinerary.luggage;
+package edu.utsa.travelplanner.data.luggagedata;
 
 public class Luggage {
 
