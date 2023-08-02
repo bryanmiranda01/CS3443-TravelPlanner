@@ -15,14 +15,14 @@ import edu.utsa.travelplanner.TripData;
 //Class allows user to input new trip information
 public class AddTrip extends AppCompatActivity {
 
-    public Button Imagebutton;
+    public ImageButton Imagebutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
     setContentView(R.layout.add_trip);
-    TripData DB = TripData.getInstance(this);
-    //setupBackButton();
+    TripData db = TripData.getInstance(this);
+    setupBackButton();
 
     //User input for trip details
     EditText destination_input = findViewById(R.id.ans_dest);
@@ -51,19 +51,17 @@ public class AddTrip extends AppCompatActivity {
                 Toast.makeText(AddTrip.this, "Please complete all the fields listed", Toast.LENGTH_SHORT).show();
 
             } else {
-                DB.insertTripData(dest, address, cc, start, end, transp);
+                db.insertTripData(dest, address, cc, start, end, transp);
                 Intent intent = new Intent(AddTrip.this, HomeLanding.class);
                 startActivity(intent);
             }
         }
     });
-
-
     }
-/*
+
     //Sends user back to homelanding page
     private void setupBackButton() {
-        Imagebutton = (Button) findViewById(R.id.back_itin);
+        Imagebutton = (ImageButton) findViewById(R.id.back_itin);
 
         Imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +70,7 @@ public class AddTrip extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    } */
+    }
 }
 
 

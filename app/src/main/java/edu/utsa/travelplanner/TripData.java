@@ -4,36 +4,36 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.utsa.travelplanner.data.AppData;
 import edu.utsa.travelplanner.ui.home.Trip;
 
-public class TripData extends SQLiteOpenHelper {
+public class TripData extends AppData {
 
     public static TripData instance;
 
     public TripData(Context context) {
-        super(context, "TripDetails.db", null, 1);
+        super(context);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("create Table details(id INTEGER PRIMARY KEY, ans_dest TEXT,ans_hotel TEXT," +
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create Table details(id INTEGER PRIMARY KEY, ans_dest TEXT,ans_hotel TEXT," +
                 "ans_cc TEXT, ans_start TEXT,ans_end TEXT,ans_transp TEXT)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase DB, int oldVersion, int newVersion) {
-        DB.execSQL("drop Table if exists Tripdetails");
-        onCreate(DB);
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("drop Table if exists tripDetails");
+        onCreate(db);
     }
 
     public List<Trip> getDetails() {
-        SQLiteDatabase DB = getWritableDatabase();
-        Cursor cursor = DB.query("details", null, null, null, null, null, null);
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.query("details", null, null, null, null, null, null);
         List<Trip> details = new ArrayList<>();
         while (cursor.moveToNext()) {
             int tripid = cursor.getInt(cursor.getColumnIndexOrThrow("trip_id"));
@@ -59,7 +59,7 @@ public class TripData extends SQLiteOpenHelper {
     public void insertTripData(String ans_dest, String ans_hotel, String ans_cc, String ans_start,
                                String ans_end, String ans_transp) {
 
-        SQLiteDatabase DB = this.getWritableDatabase();
+        SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         contentValues.put("ans_dest", ans_dest);
@@ -69,7 +69,7 @@ public class TripData extends SQLiteOpenHelper {
         contentValues.put("ans_end", ans_end);
         contentValues.put("ans_transp", ans_transp);
 
-        DB.insert("details", null, contentValues);
+        db.insert("details", null, contentValues);
     }
 
 
@@ -77,7 +77,7 @@ public class TripData extends SQLiteOpenHelper {
     public void updateTripData(int tripid, String ans_dest, String ans_hotel, String ans_cc, String ans_start,
                                String ans_end, String ans_transp) {
 
-        SQLiteDatabase DB = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         contentValues.put("ans_dest", ans_dest);
@@ -87,16 +87,16 @@ public class TripData extends SQLiteOpenHelper {
         contentValues.put("ans_end", ans_end);
         contentValues.put("ans_transp", ans_transp);
 
-        DB.update("details", contentValues, "tripid = ?", new String[]{String.valueOf(tripid)});
+        db.update("details", contentValues, "tripid = ?", new String[]{String.valueOf(tripid)});
 
     }
 
     //Deleting trip information
     public void deleteTripData(int tripid) {
 
-        SQLiteDatabase DB = this.getWritableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
 
-        DB.delete("details", "tripid = ?", new String[]{String.valueOf(tripid)});
+        db.delete("details", "tripid = ?", new String[]{String.valueOf(tripid)});
     }
 
 }
