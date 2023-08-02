@@ -43,7 +43,7 @@
         <activity android:name=".ui.login.ResetConfirmationSuccess"/>
         <activity android:name=".ui.newuser.AccountCreationSuccess"/>
 
-        <activity android:name=".ui.home.CreateTrip"/>
+        <activity android:name=".ui.home.AddTrip"/>
         <activity android:name=".ui.home.Trip"/>
         <activity android:name=".TripData"/>
 
