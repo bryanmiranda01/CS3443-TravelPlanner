@@ -4,35 +4,36 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.utsa.travelplanner.data.AppData;
-
-public class TripData extends AppData {
+public class TripData extends SQLiteOpenHelper {
 
     public static TripData instance;
 
     public TripData(Context context) {
-        super(context);
+        super(context, "tripdetails.db", null, 1);
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create Table details(tripid INTEGER PRIMARY KEY, ans_dest TEXT,ans_hotel TEXT," +
+        db.execSQL("CREATE TABLE details(tripid INTEGER PRIMARY KEY, ans_dest TEXT,ans_hotel TEXT," +
                 "ans_cc TEXT, ans_start TEXT,ans_end TEXT,ans_transp TEXT)");
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop Table if exists details");
+        db.execSQL("DROP TABLE if exists details");
         onCreate(db);
     }
 
+    //Get all information
     public List<Trip> getDetails() {
-        SQLiteDatabase db = getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query("details", null, null, null, null, null, null);
         List<Trip> details = new ArrayList<>();
         while (cursor.moveToNext()) {
@@ -103,16 +104,15 @@ public class TripData extends AppData {
         db.delete("details", "tripid = ?", new String[]{String.valueOf(tripid)});
     }
 
-/*
-    public boolean isDetails(String details) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String queryString = "SELECT 1 FROM " + details + " WHERE " + COLUMN_USERNAME + " = ?";
-        Cursor c = db.rawQuery(queryString, new String[]{details});
-        boolean result = c.getCount() > 0;
-        c.close();
-        db.close();
-        return result;
+    //Fetching information
+
+    public void fetch(TextView textView){
+        Cursor cursor = this.getReadableDatabase().rawQuery("Select ans_dest from" + "details" + "", null);
+        textView.setText("");
+        while (cursor.moveToNext()){
+            textView.append(cursor.getString(1));
+        }
     }
- */
+
 
 }

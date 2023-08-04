@@ -43,6 +43,11 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
+        // Delete database tripdata
+        // Context context = getApplicationContext();
+        // context.deleteDatabase("tripdetails.db");
+
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each

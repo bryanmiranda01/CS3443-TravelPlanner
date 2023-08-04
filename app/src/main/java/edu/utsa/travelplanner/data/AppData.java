@@ -6,9 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class AppData extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "travelplanner.db";
@@ -24,7 +24,6 @@ public class AppData extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE users (id INTEGER PRIMARY KEY, email TEXT, password TEXT, securityCode TEXT)");
         db.execSQL("CREATE TABLE userProfile (id INTEGER PRIMARY KEY, fName TEXT, lName TEXT, age TEXT, gender TEXT, address TEXT, phoneNumber TEXT)");
-
     }
 
     @Override
@@ -38,7 +37,6 @@ public class AppData extends SQLiteOpenHelper {
     }
 
 
-
     public static AppData getInstance(Context context) {
         if (instance == null) {
             instance = new AppData(context);
@@ -47,7 +45,7 @@ public class AppData extends SQLiteOpenHelper {
     }
 
     // ------------------------------------  USER MODEL ---------------------------------------------------------------- //
-    public void addUser(String email, String password, String sc){
+    public void addUser(String email, String password, String sc) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("email", email);
@@ -69,7 +67,7 @@ public class AppData extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.query("users", null, null, null, null, null, null);
         List<User_Model> users = new ArrayList<>();
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
             String email = cursor.getString(cursor.getColumnIndexOrThrow("email"));
             String password = cursor.getString(cursor.getColumnIndexOrThrow("password"));
@@ -84,12 +82,12 @@ public class AppData extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         Cursor cursor = db.query("users", null, null, null, null, null, null);
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             int id_DB = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
             String email_DB = cursor.getString(cursor.getColumnIndexOrThrow("email"));
             String password_DB = cursor.getString(cursor.getColumnIndexOrThrow("password"));
             String securityCode_DB = cursor.getString(cursor.getColumnIndexOrThrow("securityCode"));
-            if (email_DB.equals(email)){
+            if (email_DB.equals(email)) {
                 values.put("password", password);
                 values.put("securityCode", securityCode);
                 db.update("users", values, "id = ?", new String[]{String.valueOf(id_DB)});
@@ -98,19 +96,19 @@ public class AppData extends SQLiteOpenHelper {
         }
     }
 
-    public void deleteUser(int id){
+    public void deleteUser(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("users", "id = ?", new String[]{String.valueOf(id)});
         db.delete("userProfile", "id = ?", new String[]{String.valueOf(id)});
     }
 
     // ------------------------------------  USER PROFILE MODEL ---------------------------------------------------------------- //
-    public UserProfile getUserProfile(int id){
+    public UserProfile getUserProfile(int id) {
         SQLiteDatabase db = getWritableDatabase();
         UserProfile profile_of_id = new UserProfile();
 
         Cursor cursor = db.query("userProfile", null, null, null, null, null, null);
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             int id_DB = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
             String fName_DB = cursor.getString(cursor.getColumnIndexOrThrow("fName"));
             String lName_DB = cursor.getString(cursor.getColumnIndexOrThrow("lName"));
@@ -119,7 +117,7 @@ public class AppData extends SQLiteOpenHelper {
             String address_DB = cursor.getString(cursor.getColumnIndexOrThrow("address"));
             String phoneNumber_DB = cursor.getString(cursor.getColumnIndexOrThrow("phoneNumber"));
 
-            if (id_DB == id){
+            if (id_DB == id) {
                 profile_of_id.setfName(fName_DB);
                 profile_of_id.setlName(lName_DB);
                 profile_of_id.setAge(age_DB);
@@ -131,9 +129,4 @@ public class AppData extends SQLiteOpenHelper {
         }
         return profile_of_id;
     }
-
-
-
-
 }
-

@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import edu.utsa.travelplanner.R;
+import edu.utsa.travelplanner.data.tripdata.TripData;
 
 public class TripDetails extends AppCompatActivity {
 
@@ -22,7 +24,6 @@ public class TripDetails extends AppCompatActivity {
         setupBackButton();
     }
 
-    /*
     TextView txtDest = (TextView) findViewById(R.id.textDestination);
     TextView txtAddress = (TextView) findViewById(R.id.textHotelAddress);
     TextView txtVisit = (TextView) findViewById(R.id.textCitiesWillVisit);
@@ -30,11 +31,11 @@ public class TripDetails extends AppCompatActivity {
     TextView txtEnd = (TextView) findViewById(R.id.textEndDate);
     TextView txtTransp = (TextView) findViewById(R.id.textTransportation);
 
+    TripData db = TripData.getInstance(this);
 
-     */
 
 
-/*
+    /*
     // Update information, add this function to trip details screen
 
         update_itin.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,12 @@
 package edu.utsa.travelplanner.ui.settings;
 
-public class AccountSettings {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+//Account information
+public class AccountSettings extends AppCompatActivity {
+
+
+
+
 }

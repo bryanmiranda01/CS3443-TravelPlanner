@@ -36,6 +36,8 @@ public class ViewSelection  extends AppCompatActivity {
                 }
             });
         }
+
+
         /* Need to still add classes for these to work
         //View checklist
         private void setupButton2() {
