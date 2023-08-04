@@ -8,7 +8,7 @@
     tools:ignore="LabelFor">
 
     <ImageButton
-        android:id="@+id/back_itin"
+        android:id="@+id/back_add_activity"
         android:layout_width="84dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -36,14 +36,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/add_trip"
+        android:id="@+id/addActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/destination"
         android:layout_marginTop="5dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/add_trip"
+        android:text="@string/add_activity"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
@@ -53,205 +52,199 @@
         app:layout_constraintTop_toBottomOf="@+id/top_bar" />
 
     <TextView
-        android:id="@+id/destination"
+        android:id="@+id/activityName"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_dest"
+        android:layout_marginTop="5dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/destination"
+        android:text="@string/activity_name"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_trip" />
+        app:layout_constraintTop_toBottomOf="@+id/addActivity" />
 
     <EditText
-        android:id="@+id/ans_dest"
-        android:inputType="text"
+        android:id="@+id/ans_actname"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/hotel_address"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/destination" />
+        app:layout_constraintTop_toBottomOf="@+id/activityName" />
 
     <TextView
-        android:id="@+id/hotel_address"
+        android:id="@+id/activityLocation"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_hotel"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/hotel_address"
+        android:text="@string/activity_location"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_dest" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_actname" />
 
     <EditText
-        android:id="@+id/ans_hotel"
-        android:inputType="text"
+        android:id="@+id/ans_location"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/city_country"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_address" />
+        app:layout_constraintTop_toBottomOf="@+id/activityLocation" />
 
     <TextView
-        android:id="@+id/city_country"
+        android:id="@+id/activityStartDate"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_cc"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/city_country"
+        android:text="@string/activity_start_date"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_hotel" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_location" />
 
     <EditText
-        android:id="@+id/ans_cc"
-        android:inputType="text"
+        android:id="@+id/ans_startdate"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/start_date"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city_country" />
+        app:layout_constraintTop_toBottomOf="@+id/activityStartDate" />
 
     <TextView
-        android:id="@+id/start_date"
+        android:id="@+id/activityStartTime"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_start"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/start_date"
+        android:text="@string/activity_start_time"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_cc" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_startdate" />
 
     <EditText
-        android:id="@+id/ans_start"
-        android:inputType="text"
+        android:id="@+id/ans_starttime"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/end_date"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_date" />
+        app:layout_constraintTop_toBottomOf="@+id/activityStartTime" />
 
     <TextView
-        android:id="@+id/end_date"
+        android:id="@+id/activityEndDate"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_end"
         android:background="@color/off_white"
-        android:layout_marginTop="3dp"
         android:fontFamily="serif"
-        android:text="@string/end_date"
+        android:text="@string/activity_end_date"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_start" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_starttime" />
 
     <EditText
-        android:id="@+id/ans_end"
-        android:inputType="text"
+        android:id="@+id/ans_enddate"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/transport"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/end_date" />
+        app:layout_constraintTop_toBottomOf="@+id/activityEndDate" />
 
     <TextView
-        android:id="@+id/transport"
+        android:id="@+id/activityEndTime"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_transp"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
-        android:text="@string/transportation"
+        android:text="@string/activity_end_time"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_end" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_enddate" />
 
     <EditText
-        android:id="@+id/ans_transp"
-        android:inputType="text"
+        android:id="@+id/ans_endtime"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/done_itin"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transport" />
+        app:layout_constraintTop_toBottomOf="@+id/activityEndTime" />
 
     <Button
-        android:id="@+id/done_itin"
+        android:id="@+id/done_add_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
         android:backgroundTint="@color/aqua"
         android:contentDescription="@string/next_btn"
         android:gravity="center_horizontal"
@@ -259,7 +252,9 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/bot_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_endtime"
+        app:layout_constraintVertical_bias="0.75" />
 
     <TextView
         android:id="@+id/bot_bar"

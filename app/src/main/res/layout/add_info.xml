@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:ignore="LabelFor">
+
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addSelection"
+        android:layout_width="349dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/dark_blue"
+        android:fontFamily="serif"
+        android:text="@string/what_to_add"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/top_bar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
+
+    <Button
+        android:id="@+id/addChecklist"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/pre_trip_checklist"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addSelection" />
+
+    <Button
+        android:id="@+id/addLuggage"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/luggage"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addChecklist" />
+
+    <Button
+        android:id="@+id/addActivity"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="@color/aqua"
+        android:text="@string/activity"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLuggage" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/addChecklist"
+        app:layout_constraintTop_toBottomOf="@+id/addSelection"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="92dp"
+
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/addLuggage"
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="88dp"
+
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/addActivity"
+        app:layout_constraintTop_toBottomOf="@+id/star2"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <TextView
+        android:id="@+id/bot_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:contentDescription="@string/back_btn"
+        android:id="@+id/back_add_info"
+        android:layout_width="84dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/dark_blue"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

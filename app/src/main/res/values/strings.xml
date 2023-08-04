@@ -23,6 +23,33 @@
     <string name="start_date">-Start date:</string>
     <string name="end_date">-End date:</string>
     <string name="transportation">-Mode of transportation:</string>
+
+    <string name="pre_trip_checklist">Pre-Trip Checklist</string>
+    <string name="add_pre_trip_checklist">Add Pre-Trip Checklist</string>
+    <string name="hotel_reserved">-Hotel reserved?</string>
+    <string name="transport_booked">-Transportation booked?</string>
+    <string name="passport_valid">-Passport valid?</string>
+    <string name="visa_required">-Visa required?</string>
+    <string name="shopping_list">-Shopping list?</string>
+
+    <string name="luggage">Luggage</string>
+    <string name="add_luggage_info">Add Luggage Information</string>
+    <string name="bag_owner">-Bag owner:</string>
+    <string name="bag_brand">-Brand:</string>
+    <string name="bag_weight">-Weight:</string>
+    <string name="bag_dimensions">-Dimensions:</string>
+    <string name="bag_color">-Color:</string>
+
+    <string name="activity">Activity</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="activity_name">-Name of activity:</string>
+    <string name="activity_location">-Location:</string>
+    <string name="activity_start_date">-Start date:</string>
+    <string name="activity_start_time">-Start time:</string>
+    <string name="activity_end_date">-End date:</string>
+    <string name="activity_end_time">-Start time:</string>
+    <string name="upcoming_activities">-Upcoming activities</string>
+
     <string name="select_itin">Select itinerary</string>
     <string name="select_details">What do you wish to view?</string>
     <string name="trip_details">Trip details</string>
@@ -36,6 +63,7 @@
     <string name="button">Button</string>
 
 <!--\General strings-->
+    <string name="will_add">Will add a checklist with the following trackers</string>
     <string name="enter_information">Enter information here:</string>
     <string name="add_trip_btn">Add trip</string>
     <string name="done_btn">Done</string>
@@ -48,5 +76,6 @@
     <string name="act_placeholder">Activity placeholder</string>
     <string name="rem_placeholder">Reminder placeholder</string>
     <string name="reminder">Reminders</string>
+    <string name="what_to_add">What do you wish to add?</string>
 
 </resources>

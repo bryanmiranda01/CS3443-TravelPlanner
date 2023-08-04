@@ -22,8 +22,12 @@ public class ViewTrips extends AppCompatActivity {
         setContentView(R.layout.view_trips);
         setupBackButton();
 
-        TripData db = TripData.getInstance(this);
+        TripData db = new TripData(this);
         List<Trip> details = db.getDetails();
+
+
+
+
 
         /*View trip destination , add this to view trips screen
 

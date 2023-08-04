@@ -8,7 +8,7 @@
     tools:ignore="LabelFor">
 
     <ImageButton
-        android:id="@+id/back_itin"
+        android:id="@+id/back_add_luggage"
         android:layout_width="84dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -36,14 +36,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/add_trip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/destination"
+        android:id="@+id/addLuggage"
+        android:layout_width="281dp"
+        android:layout_height="82dp"
         android:layout_marginTop="5dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/add_trip"
+        android:text="@string/add_luggage_info"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
@@ -53,205 +52,170 @@
         app:layout_constraintTop_toBottomOf="@+id/top_bar" />
 
     <TextView
-        android:id="@+id/destination"
+        android:id="@+id/bagOwner"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_dest"
+        android:layout_marginTop="25dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/destination"
+        android:text="@string/bag_owner"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_trip" />
+        app:layout_constraintTop_toBottomOf="@+id/addLuggage" />
 
     <EditText
-        android:id="@+id/ans_dest"
-        android:inputType="text"
+        android:id="@+id/ans_owner"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/hotel_address"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/destination" />
+        app:layout_constraintTop_toBottomOf="@+id/bagOwner" />
 
     <TextView
-        android:id="@+id/hotel_address"
+        android:id="@+id/bagBrand"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_hotel"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/hotel_address"
+        android:text="@string/bag_brand"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_dest" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_owner" />
 
     <EditText
-        android:id="@+id/ans_hotel"
-        android:inputType="text"
+        android:id="@+id/ans_brand"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/city_country"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel_address" />
+        app:layout_constraintTop_toBottomOf="@+id/bagBrand" />
 
     <TextView
-        android:id="@+id/city_country"
+        android:id="@+id/bagWeight"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_cc"
-        android:layout_marginTop="3dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/city_country"
+        android:text="@string/bag_weight"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_hotel" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_brand" />
 
     <EditText
-        android:id="@+id/ans_cc"
-        android:inputType="text"
+        android:id="@+id/ans_weight"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/start_date"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city_country" />
+        app:layout_constraintTop_toBottomOf="@+id/bagWeight"
+        tools:ignore="TextFields" />
 
     <TextView
-        android:id="@+id/start_date"
+        android:id="@+id/bagDimensions"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_start"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="4dp"
         android:background="@color/off_white"
         android:fontFamily="serif"
-        android:text="@string/start_date"
+        android:text="@string/bag_dimensions"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_cc" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_weight" />
 
     <EditText
-        android:id="@+id/ans_start"
-        android:inputType="text"
+        android:id="@+id/ans_dimen"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/end_date"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_date" />
+        app:layout_constraintTop_toBottomOf="@+id/bagDimensions" />
 
     <TextView
-        android:id="@+id/end_date"
+        android:id="@+id/bagColor"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_end"
         android:background="@color/off_white"
-        android:layout_marginTop="3dp"
         android:fontFamily="serif"
-        android:text="@string/end_date"
+        android:text="@string/bag_color"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_start" />
+        app:layout_constraintTop_toBottomOf="@+id/ans_dimen" />
 
     <EditText
-        android:id="@+id/ans_end"
-        android:inputType="text"
+        android:id="@+id/ans_color"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_above="@+id/transport"
         android:background="@color/off_white"
         android:hint="@string/enter_information"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/end_date" />
-
-    <TextView
-        android:id="@+id/transport"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ans_transp"
-        android:layout_marginTop="3dp"
-        android:background="@color/off_white"
-        android:text="@string/transportation"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ans_end" />
-
-    <EditText
-        android:id="@+id/ans_transp"
-        android:inputType="text"
-        android:layout_width="330dp"
-        android:layout_height="48dp"
-        android:layout_above="@+id/done_itin"
-        android:background="@color/off_white"
-        android:hint="@string/enter_information"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transport" />
+        app:layout_constraintTop_toBottomOf="@+id/bagColor" />
 
     <Button
-        android:id="@+id/done_itin"
+        android:id="@+id/done_add_luggage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
         android:backgroundTint="@color/aqua"
         android:contentDescription="@string/next_btn"
         android:gravity="center_horizontal"
@@ -259,7 +223,8 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/bot_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_color" />
 
     <TextView
         android:id="@+id/bot_bar"

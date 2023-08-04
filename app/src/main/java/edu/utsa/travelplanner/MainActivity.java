@@ -1,7 +1,5 @@
 package edu.utsa.travelplanner;
 
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -34,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.sign_in);
 
         // Delete Old Database (USE WHEN YOU CHANGED THE DATABASE SCHEMA)
-//        Context context = getApplicationContext();
-//        context.deleteDatabase("travelplanner.db");
+        // Context context = getApplicationContext();
+        // context.deleteDatabase("travelplanner.db");
 
         // Getting APP DATABASE
         AppData db = AppData.getInstance(this);
