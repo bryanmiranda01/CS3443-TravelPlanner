@@ -1,4 +1,4 @@
-package edu.utsa.travelplanner.ui.calendar;
+package edu.utsa.travelplanner.ui.map;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

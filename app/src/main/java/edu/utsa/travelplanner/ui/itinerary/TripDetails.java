@@ -1,13 +1,14 @@
 package edu.utsa.travelplanner.ui.itinerary;
 
+
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.data.tripdata.TripData;
@@ -22,57 +23,42 @@ public class TripDetails extends AppCompatActivity {
 
         setContentView(R.layout.activity_trip_details);
         setupBackButton();
+
+        TextView destinationInput = findViewById(R.id.textDestination);
+        TextView addressInput = findViewById(R.id.textHotelAddress);
+        TextView ccInput = findViewById(R.id.textCitiesWillVisit);
+        TextView startInput = findViewById(R.id.textStartDate);
+        TextView endInput = findViewById(R.id.textEndDate);
+        TextView transportInput = findViewById(R.id.textTransportation);
+
+        TripData tripData = new TripData(this);
+        Cursor cursor = tripData.fetchDetails();
+        StringBuilder dest = new StringBuilder();
+        StringBuilder add = new StringBuilder();
+        StringBuilder cc = new StringBuilder();
+        StringBuilder start = new StringBuilder();
+        StringBuilder end = new StringBuilder();
+        StringBuilder transp = new StringBuilder();
+
+        while (cursor.moveToNext()) {
+            dest.append(cursor.getString(1));
+            add.append(cursor.getString(2));
+            cc.append(cursor.getString(3));
+            start.append(cursor.getString(4));
+            end.append(cursor.getString(5));
+            transp.append(cursor.getString(6));
+
+
+        }
+
+        destinationInput.setText(dest);
+        addressInput.setText(add);
+        ccInput.setText(cc);
+        startInput.setText(start);
+        endInput.setText(end);
+        transportInput.setText(transp);
+
     }
-
-    TextView txtDest = (TextView) findViewById(R.id.textDestination);
-    TextView txtAddress = (TextView) findViewById(R.id.textHotelAddress);
-    TextView txtVisit = (TextView) findViewById(R.id.textCitiesWillVisit);
-    TextView txtStart = (TextView) findViewById(R.id.textStartDate);
-    TextView txtEnd = (TextView) findViewById(R.id.textEndDate);
-    TextView txtTransp = (TextView) findViewById(R.id.textTransportation);
-
-    TripData db = TripData.getInstance(this);
-
-
-
-    /*
-    // Update information, add this function to trip details screen
-
-        update_itin.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String ans_destTXT = ans_dest.getText().toString();
-            String ans_hotelTXT = ans_hotel.getText().toString();
-            String ans_ccTXT = ans_cc.getText().toString();
-            String ans_startTXT = ans_start.getText().toString();
-            String ans_endTXT = ans_end.getText().toString();
-            String ans_transpTXT = ans_transp.getText().toString();
-
-            Boolean checkupdatedata = db.updateuserdata(ans_destTXT, ans_hotelTXT, ans_ccTXT, ans_startTXT, ans_endTXT, ans_transpTXT);
-
-            if(checkupdatedata==true)
-                Toast.makeText(HomeLanding.this,"Trip information updated", Toast.LENGTH_SHORT).show();
-            else
-                Toast.makeText(HomeLanding.this,"Trip information was not updated", Toast.LENGTH_SHORT).show();
-        }
-    });
-
-    // Delete information, add this function to trip details screen
-
-        delete_itin.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String ans_destTXT = ans_dest.getText().toString();
-
-            Boolean checkdeletedata = db.deletedata(ans_destTXT);
-
-            if(checkdeletedata==true)
-                Toast.makeText(HomeLanding.this,"Trip deleted", Toast.LENGTH_SHORT).show();
-            else
-                Toast.makeText(HomeLanding.this,"Trip was not deleted", Toast.LENGTH_SHORT).show();
-        }
-    });
-     */
 
         //Button to go back to itinerary view
         private void setupBackButton() {

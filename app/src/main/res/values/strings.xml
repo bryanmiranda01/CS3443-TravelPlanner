@@ -10,7 +10,7 @@
 <!--Menus-->
     <string name="menu_home">Home</string>
     <string name="menu_itinerary">Itinerary</string>
-    <string name="menu_calendar">Calendar</string>
+    <string name="menu_map">Map</string>
     <string name="menu_settings">Settings</string>
 
 
@@ -62,7 +62,25 @@
     <string name="placeholder">Placeholder image</string>
     <string name="button">Button</string>
 
-<!--\General strings-->
+<!--Settings-->
+    <string name="Account" />
+    <string name="AccountButton">Account</string>
+    <string name="ReminderNotifButton" />
+    <string name="RemindersNotifsButton">Reminders/\nNotifications</string>
+    <string name="LogOutButton">Log out?</string>
+    <string name="accountInfo">"Account Information: "</string>
+    <string name="username">Username:</string>
+    <string name="email">Email:</string>
+    <string name="phoneNum">"Phone #: "</string>
+    <string name="update">Update Account Information?</string>
+    <string name="changePassword">Change Password?</string>
+    <string name="loggedout">You have been logged out.</string>
+    <string name="backtologin">Redirecting to the login screen</string>
+    <string name="reminders_notifs">Reminders/Notifications</string>
+    <string name="enableReminders">Enable Reminders?</string>
+    <string name="setReminders">"Set Reminders for:\n\t-Upcoming trip date\n\t-Activities "</string>
+
+<!--General strings-->
     <string name="will_add">Will add a checklist with the following trackers</string>
     <string name="enter_information">Enter information here:</string>
     <string name="add_trip_btn">Add trip</string>
@@ -77,5 +95,12 @@
     <string name="rem_placeholder">Reminder placeholder</string>
     <string name="reminder">Reminders</string>
     <string name="what_to_add">What do you wish to add?</string>
+    <string name="hint_enter_address" />
+    <string name="hint_street_address" />
+    <string name="hint_city" />
+    <string name="hint_state" />
+    <string name="hint_postal_code" />
+    <string name="btn_enter" />
+    <string name="map_navigation" />
 
 </resources>

@@ -42,81 +42,28 @@
         android:id="@+id/itinerary1"
         android:layout_width="210dp"
         android:layout_height="65dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="116dp"
         android:backgroundTint="@color/aqua"
         android:text="@string/loc_placeholder"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_trip" />
-
-    <Button
-        android:id="@+id/itinerary2"
-        android:layout_width="210dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/aqua"
-        android:text="@string/loc_placeholder"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itinerary1" />
-
-    <Button
-        android:id="@+id/itinerary3"
-        android:layout_width="210dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/aqua"
-        android:text="@string/loc_placeholder"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itinerary2" />
 
     <ImageView
         android:id="@+id/star1"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:layout_marginTop="65dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="128dp"
         android:contentDescription="@string/star"
         app:layout_constraintEnd_toStartOf="@+id/itinerary1"
         app:layout_constraintTop_toBottomOf="@+id/select_trip"
-        app:srcCompat="@android:drawable/star_big_off" />
-
-    <ImageView
-        android:id="@+id/star2"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="75dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/itinerary2"
-        app:layout_constraintTop_toBottomOf="@+id/star1"
-        app:srcCompat="@android:drawable/star_big_off" />
-
-    <ImageView
-        android:id="@+id/star3"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="75dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/itinerary3"
-        app:layout_constraintTop_toBottomOf="@+id/star2"
         app:srcCompat="@android:drawable/star_big_off" />
 
     <TextView
@@ -131,7 +78,7 @@
 
     <ImageButton
         android:contentDescription="@string/back_btn"
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn_view"
         android:layout_width="84dp"
         android:layout_height="56dp"
         android:layout_alignParentStart="true"
@@ -144,5 +91,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

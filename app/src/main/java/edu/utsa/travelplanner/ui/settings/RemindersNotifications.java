@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
 
-public class LogOut extends AppCompatActivity {
+public class RemindersNotifications extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.logout);
+        setContentView(R.layout.reminders);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

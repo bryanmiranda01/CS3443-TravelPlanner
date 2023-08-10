@@ -2,23 +2,26 @@ package edu.utsa.travelplanner.data.tripdata;
 
 public class Trip {
 
-    private int tripId;
-    private String destination;
-    private String address;
-    private String cc;
-    private String start;
-    private String end;
-    private String transport;
+    public int tripId;
+    public String destination;
+
+    public String address;
+    public String cc;
+    public String startt;
+    public String endt;
+    public String transport;
 
     //Constructor
-    public Trip(int tripId, String destination, String address, String cc, String start, String end, String transport) {
-        this.tripId = tripId;
+    public Trip(int tripid, String destination, String address, String cc, String startt, String endt, String transport) {
         this.destination = destination;
         this.address = address;
         this.cc = cc;
-        this.start = start;
-        this.end = end;
+        this.startt = startt;
+        this.endt = endt;
         this.transport = transport;
+    }
+
+    public Trip(){
     }
 
     // Get/set trip id
@@ -51,18 +54,18 @@ public class Trip {
 
     //    Get/set start date
     public String getStart() {
-        return start;
+        return startt;
     }
     public void setStart(String start) {
-        this.start = start;
+        this.startt = start;
     }
 
     //    Get/set end date
     public String getEnd() {
-        return end;
+        return endt;
     }
     public void setEnd(String end) {
-        this.end = end;
+        this.endt = end;
     }
 
     //    Get/set mode of transportation

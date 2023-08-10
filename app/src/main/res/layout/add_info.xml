@@ -39,10 +39,10 @@
         app:layout_constraintTop_toBottomOf="@+id/top_bar" />
 
     <Button
-        android:id="@+id/addChecklist"
+        android:id="@+id/addChecklist1"
         android:layout_width="210dp"
         android:layout_height="65dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/aqua"
         android:text="@string/pre_trip_checklist"
         android:textAlignment="center"
@@ -54,9 +54,9 @@
         app:layout_constraintTop_toBottomOf="@+id/addSelection" />
 
     <Button
-        android:id="@+id/addLuggage"
+        android:id="@+id/addLuggage1"
         android:layout_width="210dp"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_marginTop="65dp"
         android:backgroundTint="@color/aqua"
         android:text="@string/luggage"
@@ -66,12 +66,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addChecklist" />
+        app:layout_constraintTop_toBottomOf="@+id/addChecklist1" />
 
     <Button
-        android:id="@+id/addActivity"
+        android:id="@+id/addActivity1"
         android:layout_width="210dp"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_marginTop="65dp"
         android:backgroundTint="@color/aqua"
         android:text="@string/activity"
@@ -81,7 +81,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addLuggage" />
+        app:layout_constraintTop_toBottomOf="@+id/addLuggage1" />
+
 
     <ImageView
         android:id="@+id/star1"
@@ -90,10 +91,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/addChecklist"
+        app:layout_constraintEnd_toStartOf="@+id/addChecklist1"
         app:layout_constraintTop_toBottomOf="@+id/addSelection"
         app:srcCompat="@android:drawable/star_big_off" />
 
@@ -104,11 +105,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="92dp"
-
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/addLuggage"
+        app:layout_constraintEnd_toStartOf="@+id/addLuggage1"
         app:layout_constraintTop_toBottomOf="@+id/star1"
         app:srcCompat="@android:drawable/star_big_off" />
 
@@ -119,11 +119,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="88dp"
-
+        android:layout_marginTop="85dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/addActivity"
+        app:layout_constraintEnd_toStartOf="@+id/addActivity1"
         app:layout_constraintTop_toBottomOf="@+id/star2"
         app:srcCompat="@android:drawable/star_big_off" />
 

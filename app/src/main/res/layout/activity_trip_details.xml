@@ -13,7 +13,7 @@
         android:background="#303030" />
 
     <!-- Trip_date -->
-    <EditText
+    <TextView
         android:id="@+id/textTripDate"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -24,13 +24,13 @@
         android:background="@drawable/rounded_edittext"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
     />
 
     <!-- Destination -->
-    <EditText
+    <TextView
         android:id="@+id/textDestination"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -47,7 +47,7 @@
     />
 
     <!-- Hotel address -->
-    <EditText
+    <TextView
         android:id="@+id/textHotelAddress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -64,7 +64,7 @@
     />
 
     <!-- Cities will visit -->
-    <EditText
+    <TextView
         android:id="@+id/textCitiesWillVisit"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -81,7 +81,7 @@
     />
 
     <!-- Start date -->
-    <EditText
+    <TextView
         android:id="@+id/textStartDate"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -92,13 +92,13 @@
         android:background="@drawable/rounded_edittext"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
     />
 
     <!-- End date -->
-    <EditText
+    <TextView
         android:id="@+id/textEndDate"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -109,13 +109,13 @@
         android:background="@drawable/rounded_edittext"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
     />
 
     <!-- Mode of transportation -->
-    <EditText
+    <TextView
         android:id="@+id/textTransportation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -126,9 +126,9 @@
         android:background="@drawable/rounded_edittext"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
     />
 
     <!-- Back to previous menu button -->

@@ -239,20 +239,23 @@
         android:background="@color/dark_blue"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <ImageView
-        android:id="@+id/sidebar"
-        android:layout_width="45dp"
-        android:layout_height="36dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/placeholder"
-        android:translationZ="270dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_arrow" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/sidebar"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:contentDescription="@string/placeholder"-->
+<!--        android:translationZ="270dp"-->
+<!--        android:backgroundTint="@color/dark_blue"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.044"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/back_arrow" />-->
+<!--    -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
@@ -267,13 +270,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/add" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main"
-        app:layout_anchor="@+id/placeholderimage"
-        app:layout_anchorGravity="center"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/placeholderimage"
@@ -285,6 +281,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loc_placeholder3"
         app:srcCompat="@drawable/placeholder_image"/>
+
+    <ImageButton
+        android:id="@+id/itineraryButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif_reminder2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/itinerary" />
+
+    <ImageButton
+        android:id="@+id/mapButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bot_bar"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif_reminder2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/map" />
+
+    <ImageButton
+        android:id="@+id/settingsButton3"
+        android:contentDescription="@string/button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bot_bar"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif_reminder2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/settings" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
