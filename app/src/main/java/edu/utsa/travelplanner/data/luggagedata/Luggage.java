@@ -5,17 +5,20 @@ public class Luggage {
     private int luggageId;
     private String owner;
     private String brand;
-    private double weight; //lbs
+    private String weight; //lbs
     private String dimensions;
     private String color;
 
-    public Luggage(int luggageId, String owner, String brand, double weight, String dimensions, String color){
+    public Luggage(int luggageId, String owner, String brand, String weight, String dimensions, String color){
         this.luggageId = luggageId;
         this.owner = owner;
         this.brand = brand;
         this.weight = weight;
         this.dimensions = dimensions;
         this.color = color;
+    }
+
+    public Luggage(){
     }
 
     //Get/set luggage id
@@ -43,10 +46,10 @@ public class Luggage {
     }
 
     //Get/set weight
-    public double getWeight() {
+    public String getWeight() {
         return weight;
     }
-    public void setWeight(double weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 

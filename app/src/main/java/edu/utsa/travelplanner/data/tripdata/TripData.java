@@ -3,48 +3,72 @@ package edu.utsa.travelplanner.data.tripdata;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class TripData extends SQLiteOpenHelper {
 
     public static TripData instance;
+    public Context context;
+    public SQLiteDatabase database;
+
+    public static final String TABLE_NAME = "details";
+    public static final String ID = "tripid";
+    public static final String DEST = "destination";
+    public static final String HOTEL = "address";
+    public static final String CC = "cc";
+    public static final String STARTT = "startt";
+    public static final String ENDT = "endt";
+    public static final String TRANSP = "transport";
 
     public TripData(Context context) {
         super(context, "tripdetails.db", null, 1);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE details(tripid INTEGER PRIMARY KEY, ans_dest TEXT,ans_hotel TEXT," +
-                "ans_cc TEXT, ans_start TEXT,ans_end TEXT,ans_transp TEXT)");
-
+        String query = "CREATE TABLE " + TABLE_NAME + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + DEST + " TEXT," + HOTEL + " TEXT," + CC
+                + " TEXT," + STARTT + " TEXT, " + ENDT + " TEXT, " + TRANSP + " TEXT)";
+        db.execSQL(query);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE if exists details");
+        db.execSQL("DROP TABLE IF EXISTS details");
         onCreate(db);
     }
 
-    //Get all information
-    public List<Trip> getDetails() {
+    //Get all information  --TESTING___
+    public ArrayList getDetails() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query("details", null, null, null, null, null, null);
-        List<Trip> details = new ArrayList<>();
-        while (cursor.moveToNext()) {
-            int tripid = cursor.getInt(cursor.getColumnIndexOrThrow("trip_id"));
-            String ans_dest = cursor.getString(cursor.getColumnIndexOrThrow("destination"));
-            String ans_hotel = cursor.getString(cursor.getColumnIndexOrThrow("address"));
-            String ans_cc = cursor.getString(cursor.getColumnIndexOrThrow("city/country"));
-            String ans_start = cursor.getString(cursor.getColumnIndexOrThrow("start"));
-            String ans_end = cursor.getString(cursor.getColumnIndexOrThrow("end"));
-            String ans_transp = cursor.getString(cursor.getColumnIndexOrThrow("transportation"));
-            details.add(new Trip(tripid, ans_dest, ans_hotel, ans_cc, ans_start, ans_end, ans_transp));
+        String query = "SELECT * FROM details";
+        Cursor cursor = db.rawQuery(query, null);
+        ArrayList details = new ArrayList();
+        if (cursor.moveToFirst()) {
+            do {
+                String destination = cursor.getString(1);
+                String address = cursor.getString(2);
+                String cc = cursor.getString(3);
+                String startt = cursor.getString(4);
+                String endt = cursor.getString(5);
+                String transport = cursor.getString(6);
+
+                Trip trip = new Trip();
+                trip.setDestination(destination);
+                trip.setAddress(address);
+                trip.setCc(cc);
+                trip.setStart(startt);
+                trip.setEnd(endt);
+                trip.setTransport(transport);
+
+                details.add(details);
+            } while (cursor.moveToNext());
         }
         return details;
     }
@@ -57,39 +81,39 @@ public class TripData extends SQLiteOpenHelper {
     }
 
     //Adding trip information
-    public void insertTripData(String ans_dest, String ans_hotel, String ans_cc, String ans_start,
-                               String ans_end, String ans_transp) {
+    public void addTripData(String destination, String address, String cc, String startt,
+                            String endt, String transport) {
 
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("ans_dest", ans_dest);
-        contentValues.put("ans_hotel", ans_hotel);
-        contentValues.put("ans_cc", ans_cc);
-        contentValues.put("ans_start", ans_start);
-        contentValues.put("ans_end", ans_end);
-        contentValues.put("ans_transp", ans_transp);
+        contentValues.put("destination", destination);
+        contentValues.put("address", address);
+        contentValues.put("cc", cc);
+        contentValues.put("startt", startt);
+        contentValues.put("endt", endt);
+        contentValues.put("transport", transport);
 
         db.insert("details", null, contentValues);
     }
 
 
     //Updating trip information
-    public void updateTripData(int tripid, String ans_dest, String ans_hotel, String ans_cc, String ans_start,
-                               String ans_end, String ans_transp) {
+    public void updateTripData(int tripid, String destination, String address, String cc, String startt,
+                               String endt, String transport) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         Cursor cursor = db.query("details", null, null, null, null, null, null);
         while (cursor.moveToNext()) {
-            int up_tripid = cursor.getInt(cursor.getColumnIndexOrThrow("trip_id"));
-            String up_ans_dest = cursor.getString(cursor.getColumnIndexOrThrow("destination"));
-            String up_ans_hotel = cursor.getString(cursor.getColumnIndexOrThrow("address"));
-            String up_ans_cc = cursor.getString(cursor.getColumnIndexOrThrow("city/country"));
-            String up_ans_start = cursor.getString(cursor.getColumnIndexOrThrow("start"));
-            String up_ans_end = cursor.getString(cursor.getColumnIndexOrThrow("end"));
-            String up_ans_transp = cursor.getString(cursor.getColumnIndexOrThrow("transportation"));
+            int up_tripid = cursor.getInt(cursor.getColumnIndexOrThrow("tripid"));
+            String up_dest = cursor.getString(cursor.getColumnIndexOrThrow("destination"));
+            String up_address = cursor.getString(cursor.getColumnIndexOrThrow("address"));
+            String up_cc = cursor.getString(cursor.getColumnIndexOrThrow("city/country"));
+            String up_start = cursor.getString(cursor.getColumnIndexOrThrow("start"));
+            String up_endt = cursor.getString(cursor.getColumnIndexOrThrow("end"));
+            String up_transp = cursor.getString(cursor.getColumnIndexOrThrow("transportation"));
 
             db.update("details", contentValues, "tripid=?", new String[]{String.valueOf(up_tripid)});
         }
@@ -104,15 +128,10 @@ public class TripData extends SQLiteOpenHelper {
         db.delete("details", "tripid = ?", new String[]{String.valueOf(tripid)});
     }
 
-    //Fetching information
-
-    public void fetch(TextView textView){
-        Cursor cursor = this.getReadableDatabase().rawQuery("Select ans_dest from" + "details" + "", null);
-        textView.setText("");
-        while (cursor.moveToNext()){
-            textView.append(cursor.getString(1));
-        }
+    //Fetch specific strings
+    public Cursor fetchDetails() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        return cursor;
     }
-
-
 }

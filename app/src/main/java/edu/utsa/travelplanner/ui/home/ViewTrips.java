@@ -1,64 +1,51 @@
 package edu.utsa.travelplanner.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-
 import edu.utsa.travelplanner.R;
-import edu.utsa.travelplanner.data.tripdata.Trip;
 import edu.utsa.travelplanner.data.tripdata.TripData;
 
+//Class needs overhaul
 public class ViewTrips extends AppCompatActivity {
 
+    public ImageButton imageButton;
     public Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_trips);
+        TripData db = TripData.getInstance(this);
         setupBackButton();
+        setupItinButton();
 
-        TripData db = new TripData(this);
-        List<Trip> details = db.getDetails();
+        }
 
+    private void setupItinButton() {
+        button = (Button) findViewById(R.id.itinerary1);
 
-
-
-
-        /*View trip destination , add this to view trips screen
-
-        view_itin.setOnClickListener(new View.OnClickListener() {
-
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor res = DB.getdata();
-                if(res.getCount()==0) {
-                    Toast.makeText(HomeLanding.this,"No entry exists", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-                    buffer.append("Destination :" + res.getString(0)+"\n");
-
-                }
-            });
-
-        */
-
+                finish();
+            }
+        });
     }
+
         //Sends user backs to homelanding page
         private void setupBackButton() {
-            button = (Button) findViewById(R.id.buttonBack);
+            imageButton = (ImageButton) findViewById(R.id.back_btn_view);
 
-            button.setOnClickListener(new View.OnClickListener() {
+            imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                  public void onClick(View v) {
-                     Intent intent = new Intent(ViewTrips.this, HomeLanding.class);
-                     startActivity(intent);
+                     finish();
             }
         });
     }
