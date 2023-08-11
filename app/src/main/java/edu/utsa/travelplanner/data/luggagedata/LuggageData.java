@@ -116,9 +116,19 @@ public class LuggageData extends SQLiteOpenHelper {
     }
 
     //Fetch specific strings
-    public Cursor fetchLuggage() {
+    public Cursor fetchLuggage1() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE luggageid = 1 ", new String[] {});
+        return cursor;
+    }
+    public Cursor fetchLuggage2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE luggageid = 2 ", new String[] {});
+        return cursor;
+    }
+    public Cursor fetchLuggage3() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE luggageid = 3 ", new String[] {});
         return cursor;
     }
 }

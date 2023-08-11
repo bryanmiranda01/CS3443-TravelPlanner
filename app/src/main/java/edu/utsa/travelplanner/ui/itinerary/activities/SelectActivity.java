@@ -78,19 +78,8 @@ public class SelectActivity extends AppCompatActivity {
         act4_txt.setText(bAct4);
         act5_txt.setText(bAct5);
     }
-    //Sends user back to itinerary screen
-    private void setupBackButton() {
-        ImageButton button = (ImageButton) findViewById(R.id.back_btn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectActivity.this, ActivityDetails.class);
-                startActivity(intent);
-            }
-        });
-    }
 
-    //Sends user back to itinerary screen
+    //Sends user back to activity
     private void setupAct1() {
         button = (Button) findViewById(R.id.button_act1);
         button.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +91,7 @@ public class SelectActivity extends AppCompatActivity {
         });
     }
 
-    //Sends user back to itinerary screen
+    //Sends user back to activity
     private void setupAct2() {
         ImageButton button = (ImageButton) findViewById(R.id.back_btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +102,7 @@ public class SelectActivity extends AppCompatActivity {
             }
         });
     }
-    //Sends user back to itinerary screen
+    //Sends user back to activity
     private void setupAct3() {
         ImageButton button = (ImageButton) findViewById(R.id.back_btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +113,7 @@ public class SelectActivity extends AppCompatActivity {
             }
         });
     }
-    //Sends user back to itinerary screen
+    //Sends user back to activity
     private void setupAct4() {
         ImageButton button = (ImageButton) findViewById(R.id.back_btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +124,7 @@ public class SelectActivity extends AppCompatActivity {
             }
         });
     }
-        //Sends user back to itinerary screen
+        //Sends user back to activity
         private void setupAct5() {
             ImageButton button = (ImageButton) findViewById(R.id.back_btn);
             button.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +135,16 @@ public class SelectActivity extends AppCompatActivity {
                 }
             });
         }
+    //Sends user back to itinerary screen
+    private void setupBackButton() {
+        ImageButton button = (ImageButton) findViewById(R.id.back_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+}
 
 

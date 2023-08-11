@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
+    android:background="@color/white"
     tools:ignore="LabelFor"
     tools:context=".MainActivity">
 
@@ -29,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/date_placeholder"
         android:layout_marginTop="20dp"
-        android:background="@color/off_white"
         android:fontFamily="serif"
         android:text="@string/loc_placeholder"
         android:textAlignment="center"
@@ -48,16 +47,33 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@color/off_white"
         android:text="@string/date_placeholder"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itin_location" />
+
+    <TextView
+        android:id="@+id/to_do"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bot_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/todo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/act_placeholder5"
@@ -108,7 +124,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="15dp"
         android:background="@color/light_blue"
         android:text="@string/act_placeholder"
         android:textAlignment="center"
@@ -117,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_placeholder" />
+        app:layout_constraintTop_toBottomOf="@+id/to_do" />
 
     <TextView
         android:id="@+id/act_placeholder4"
@@ -248,21 +264,6 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="192dp"
-        android:layout_height="169dp"
-        android:layout_above="@+id/act_placeholder1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
-        android:contentDescription="@string/placeholder"
-        app:layout_constraintBottom_toTopOf="@+id/act_placeholder1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_placeholder"
-        app:srcCompat="@drawable/placeholder_image" />
-
     <ImageButton
         android:contentDescription="@string/back_btn"
         android:id="@+id/back_btn"
@@ -307,5 +308,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.623"
         app:srcCompat="@drawable/luggage" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:contentDescription="@string/placeholder"
+        android:layout_width="378dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_placeholder"
+        app:srcCompat="@drawable/gettyimages_1160947136__1_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

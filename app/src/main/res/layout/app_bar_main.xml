@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
+    android:background="@color/white"
     tools:ignore="LabelFor"
     tools:context=".MainActivity">
 
@@ -30,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_text"
         android:layout_marginTop="40dp"
-        android:background="@color/off_white"
         android:fontFamily="serif"
         android:text="@string/upcoming_trips"
         android:textAlignment="center"
@@ -45,56 +44,38 @@
     <TextView
         android:id="@+id/loc_placeholder1"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/upcoming_trips"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="@color/light_blue"
         android:text="@string/loc_placeholder"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upcoming_trips" />
 
     <TextView
-        android:id="@+id/loc_placeholder2"
+        android:id="@+id/date_placeholder"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/loc_placeholder1"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="36dp"
         android:background="@color/light_blue"
-        android:text="@string/loc_placeholder"
+        android:text="@string/date_placeholder"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loc_placeholder1" />
-
-    <TextView
-        android:id="@+id/loc_placeholder3"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loc_placeholder2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:background="@color/light_blue"
-        android:text="@string/loc_placeholder"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -114,7 +95,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
         android:background="@color/light_blue"
-        android:text="@string/rem_placeholder"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -131,7 +112,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
         android:background="@color/light_blue"
-        android:text="@string/rem_placeholder"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -144,8 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/notif_reminder1"
-        android:layout_marginTop="250dp"
-        android:background="@color/off_white"
+        android:layout_marginTop="248dp"
         android:fontFamily="serif"
         android:text="@string/reminder"
         android:textAlignment="center"
@@ -153,13 +133,14 @@
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder3" />
+        app:layout_constraintTop_toBottomOf="@+id/date_placeholder" />
 
     <ImageView
         android:id="@+id/star1"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_alignEnd="@+id/loc_placeholder1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
@@ -203,32 +184,18 @@
 
     <ImageView
         android:id="@+id/star2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignEnd="@+id/loc_placeholder2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignEnd="@+id/date_placeholder"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="12dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/loc_placeholder2"
+        app:layout_constraintEnd_toStartOf="@+id/date_placeholder"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/star1"
-        app:srcCompat="@android:drawable/star_big_off" />
-
-    <ImageView
-        android:id="@+id/star3"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignEnd="@+id/loc_placeholder3"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/loc_placeholder3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/star2"
         app:srcCompat="@android:drawable/star_big_off" />
 
     <TextView
@@ -271,17 +238,6 @@
         app:srcCompat="@drawable/add" />
 
 
-    <ImageView
-        android:id="@+id/placeholderimage"
-        android:contentDescription="@string/placeholder"
-        android:layout_width="190dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loc_placeholder3"
-        app:srcCompat="@drawable/placeholder_image"/>
-
     <ImageButton
         android:id="@+id/itineraryButton"
         android:layout_width="48dp"
@@ -320,6 +276,17 @@
         app:layout_constraintTop_toBottomOf="@+id/notif_reminder2"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:contentDescription="@string/placeholder"
+        android:layout_width="205dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_placeholder"
+        app:srcCompat="@drawable/world_globe01_512x512" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

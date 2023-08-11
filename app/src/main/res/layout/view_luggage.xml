@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ebebeb">
+    android:background="@color/white">
 
     <!-- Upper area with color #303030 -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
     <!-- Title -->
     <TextView
@@ -33,7 +33,7 @@
         android:layout_weight="1"
         android:text="BAG_Name 1"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_marginStart="32dp"
@@ -73,7 +73,7 @@
         android:layout_weight="1"
         android:text="BAG_Name 2"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_marginStart="32dp"
@@ -113,7 +113,7 @@
         android:layout_weight="1"
         android:text="BAG_Name 3"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_marginStart="32dp"
@@ -152,7 +152,7 @@
         android:layout_height="wrap_content"
         android:text="BACK TO PREVIOUS MENU"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_gravity="center"
@@ -164,6 +164,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
 </LinearLayout>

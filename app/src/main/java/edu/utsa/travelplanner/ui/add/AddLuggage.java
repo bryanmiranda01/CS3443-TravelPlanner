@@ -16,7 +16,7 @@ import edu.utsa.travelplanner.data.luggagedata.LuggageData;
 //Class allows user to input new luggage information
 public class AddLuggage extends AppCompatActivity {
 
-    ImageButton imageButton;
+    public ImageButton imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

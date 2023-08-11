@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
 
+//Might need to cut this class out
 public class SouvenirInformation extends AppCompatActivity {
 
     @Override
