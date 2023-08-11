@@ -16,6 +16,8 @@ import edu.utsa.travelplanner.data.tripdata.TripData;
 public class TripDetails extends AppCompatActivity {
 
     public Button button;
+    StringBuilder dest, add, cc, start, end, transp;
+    TextView destInput, addInput, ccInput, startInput, endInput, transportInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,21 +26,21 @@ public class TripDetails extends AppCompatActivity {
         setContentView(R.layout.activity_trip_details);
         setupBackButton();
 
-        TextView destinationInput = findViewById(R.id.textDestination);
-        TextView addressInput = findViewById(R.id.textHotelAddress);
-        TextView ccInput = findViewById(R.id.textCitiesWillVisit);
-        TextView startInput = findViewById(R.id.textStartDate);
-        TextView endInput = findViewById(R.id.textEndDate);
-        TextView transportInput = findViewById(R.id.textTransportation);
+        destInput = findViewById(R.id.textDestination);
+        addInput = findViewById(R.id.textHotelAddress);
+        ccInput = findViewById(R.id.textCitiesWillVisit);
+        startInput = findViewById(R.id.textStartDate);
+        endInput = findViewById(R.id.textEndDate);
+        transportInput = findViewById(R.id.textTransportation);
 
         TripData tripData = new TripData(this);
         Cursor cursor = tripData.fetchDetails();
-        StringBuilder dest = new StringBuilder();
-        StringBuilder add = new StringBuilder();
-        StringBuilder cc = new StringBuilder();
-        StringBuilder start = new StringBuilder();
-        StringBuilder end = new StringBuilder();
-        StringBuilder transp = new StringBuilder();
+        dest = new StringBuilder();
+        add = new StringBuilder();
+        cc = new StringBuilder();
+        start = new StringBuilder();
+        end = new StringBuilder();
+        transp = new StringBuilder();
 
         while (cursor.moveToNext()) {
             dest.append(cursor.getString(1));
@@ -47,12 +49,10 @@ public class TripDetails extends AppCompatActivity {
             start.append(cursor.getString(4));
             end.append(cursor.getString(5));
             transp.append(cursor.getString(6));
-
-
         }
 
-        destinationInput.setText(dest);
-        addressInput.setText(add);
+        destInput.setText(dest);
+        addInput.setText(add);
         ccInput.setText(cc);
         startInput.setText(start);
         endInput.setText(end);

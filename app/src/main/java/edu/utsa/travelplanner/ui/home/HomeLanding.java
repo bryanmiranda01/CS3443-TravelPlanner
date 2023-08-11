@@ -1,6 +1,7 @@
 package edu.utsa.travelplanner.ui.home;
 
 
+import android.content.Context;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import edu.utsa.travelplanner.R;
+
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 import edu.utsa.travelplanner.ui.itinerary.ItineraryActivity;
 
@@ -46,7 +48,10 @@ public class HomeLanding extends AppCompatActivity {
 
         // Delete database tripdata
         //Context context = getApplicationContext();
+        //context.deleteDatabase("travelplanner.db");
         //context.deleteDatabase("tripdetails.db");
+        //context.deleteDatabase("luggagedetails.db");
+       // context.deleteDatabase("activitydetails.db");
 
 //      FAB to add trip details--------------------------------------------
         FloatingActionButton fab_add = (FloatingActionButton) findViewById(R.id.fab_add);
@@ -105,7 +110,6 @@ public class HomeLanding extends AppCompatActivity {
 //  Bottom navigation bar buttons
         private void setupSetButton () {
             ImageButton buttonSet = (ImageButton) findViewById(R.id.settingsButton3);
-
             buttonSet.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -9,13 +9,14 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
-import edu.utsa.travelplanner.data.checklistdata.Checklist;
-import edu.utsa.travelplanner.data.luggagedata.Luggage;
+import edu.utsa.travelplanner.ui.itinerary.activities.SelectActivity;
+import edu.utsa.travelplanner.ui.itinerary.checklist.PreTripChecklist;
+import edu.utsa.travelplanner.ui.itinerary.luggage.ViewLuggage;
 
 public class ViewSelection  extends AppCompatActivity {
 
     public ImageButton imageButton;
-    public Button button;
+    public Button b1,b2,b3,b4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +26,15 @@ public class ViewSelection  extends AppCompatActivity {
         setupButton1();
         setupButton2();
         setupButton3();
+        setupButton4();
         setupBackButton();
         }
 
         //User button selection
         //View trip details
         private void setupButton1() {
-            button = (Button) findViewById(R.id.button_details);
-            button.setOnClickListener(new View.OnClickListener() {
+            b1 = (Button) findViewById(R.id.button_details);
+            b1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(ViewSelection.this, TripDetails.class);
@@ -43,11 +45,11 @@ public class ViewSelection  extends AppCompatActivity {
 
         //View checklist
         private void setupButton2() {
-            button = (Button) findViewById(R.id.button_checklist);
+            b2 = (Button) findViewById(R.id.button_checklist);
 
-            button.setOnClickListener(new View.OnClickListener() {
+            b2.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                        Intent intent = new Intent(ViewSelection.this, Checklist.class);
+                        Intent intent = new Intent(ViewSelection.this, PreTripChecklist.class);
                         startActivity(intent);
                 }
                 });
@@ -56,15 +58,27 @@ public class ViewSelection  extends AppCompatActivity {
 
         //View luggage
         private void setupButton3() {
-            button = (Button) findViewById(R.id.button_luggage);
+            b3 = (Button) findViewById(R.id.button_luggage);
 
-            button.setOnClickListener(new View.OnClickListener() {
+            b3.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(ViewSelection.this, Luggage.class);
+                    Intent intent = new Intent(ViewSelection.this, ViewLuggage.class);
                     startActivity(intent);
                 }
             });
         }
+
+        //View activities button
+        private void setupButton4() {
+            b4 = (Button) findViewById(R.id.button_activities);
+            b4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ViewSelection.this, SelectActivity.class);
+                    startActivity(intent);
+            }
+        });
+    }
 
     //View back button
     private void setupBackButton() {

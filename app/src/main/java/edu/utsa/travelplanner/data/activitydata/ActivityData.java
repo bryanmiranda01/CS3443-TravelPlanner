@@ -120,10 +120,38 @@ public class ActivityData extends SQLiteOpenHelper {
         db.delete("activities", "activityid = ?", new String[]{String.valueOf(activityid)});
     }
 
-    //Fetch specific strings
-    public Cursor fetchActivity() {
+    //Fetch activity info from different rows
+    public Cursor fetchActivity1() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "  + TABLE_NAME + " WHERE activityId = 1", new String[] {});
+        return cursor;
+    }
+
+    //Fetch activity info from different rows
+    public Cursor fetchActivity2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "  + TABLE_NAME + " WHERE activityId = 2 ", new String[] {});
+        return cursor;
+    }
+
+    //Fetch activity info from different rows
+    public Cursor fetchActivity3() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "  + TABLE_NAME + " WHERE activityId = 3 ", new String[] {});
+        return cursor;
+    }
+
+    //Fetch activity info from different rows
+    public Cursor fetchActivity4() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "  + TABLE_NAME + " WHERE activityId = 4 ", new String[] {});
+        return cursor;
+    }
+
+    //Fetch activity info from different rows
+    public Cursor fetchActivity5() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "  + TABLE_NAME + " WHERE activityId = 5 ", new String[] {});
         return cursor;
     }
 }

@@ -12,21 +12,22 @@ import edu.utsa.travelplanner.R;
 
 public class AddSelection extends AppCompatActivity {
     ImageButton imageButton;
+    Button b1,b2,b3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_info);
+
         setupCheckButton();
         setupActivityButton();
         setupLuggageButton();
         setupBackButton();
-
-        setContentView(R.layout.add_info);
     }
 
     private void setupCheckButton() {
-        Button button1 = (Button) findViewById(R.id.addChecklist1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        b1 = (Button) findViewById(R.id.addChecklist1);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddSelection.this, AddChecklist.class);
@@ -35,9 +36,10 @@ public class AddSelection extends AppCompatActivity {
         });
     }
 
+
     private void setupLuggageButton() {
-        Button button2 = (Button) findViewById(R.id.addLuggage1);
-        button2.setOnClickListener(new View.OnClickListener() {
+        b2 = (Button) findViewById(R.id.addLuggage1);
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddSelection.this, AddLuggage.class);
@@ -47,8 +49,8 @@ public class AddSelection extends AppCompatActivity {
     }
 
     private void setupActivityButton() {
-        Button button3 = (Button) findViewById(R.id.addActivity1);
-        button3.setOnClickListener(new View.OnClickListener() {
+        b3 = (Button) findViewById(R.id.addActivity1);
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddSelection.this, AddActivity.class);
