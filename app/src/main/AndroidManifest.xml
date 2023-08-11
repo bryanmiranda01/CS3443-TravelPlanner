@@ -55,6 +55,8 @@
         <activity android:name=".ui.itinerary.ItineraryActivity"/>
         <activity android:name=".ui.itinerary.ViewSelection"/>
         <activity android:name=".ui.itinerary.PlannedActivity"/>
+        <activity android:name=".ui.itinerary.activities.ActivityDetails"/>
+        <activity android:name=".ui.itinerary.activities.SelectActivity"/>
 
         <activity android:name=".ui.itinerary.checklist.AddItems"/>
         <activity android:name=".ui.itinerary.checklist.PreTripChecklist"/>
@@ -82,12 +84,11 @@
         <activity android:name=".data.tripdata.Trip"/>
         <activity android:name=".data.tripdata.TripData"/>
 
-<!--       <activity android:name=".data.checklist.Checklist"/>-->
-<!--       <activity android:name=".data.checklist.ChecklistData"/>-->
+        <activity android:name=".data.checklistdata.Checklist"/>
+        <activity android:name=".data.checklistdata.ChecklistData"/>
 
-<!--       <activity android:name=".data.luggage.Luggage"/>-->
-<!--       <activity android:name=".data.luggage.LuggageData"/>-->
-
+        <activity android:name=".data.luggagedata.Luggage"/>
+        <activity android:name=".data.luggagedata.LuggageData"/>
 
         <activity android:name=".data.AppData"/>
         <activity android:name=".data.User_Model"/>

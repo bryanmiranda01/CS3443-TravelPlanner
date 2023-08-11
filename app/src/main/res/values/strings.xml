@@ -41,13 +41,15 @@
     <string name="bag_color">-Color:</string>
 
     <string name="activity">Activity</string>
+    <string name="activities">Activities</string>
+    <string name="activity_details">Activity Details</string>
     <string name="add_activity">Add Activity</string>
     <string name="activity_name">-Name of activity:</string>
     <string name="activity_location">-Location:</string>
     <string name="activity_start_date">-Start date:</string>
     <string name="activity_start_time">-Start time:</string>
     <string name="activity_end_date">-End date:</string>
-    <string name="activity_end_time">-Start time:</string>
+    <string name="activity_end_time">-End time:</string>
     <string name="upcoming_activities">-Upcoming activities</string>
 
     <string name="select_itin">Select itinerary</string>

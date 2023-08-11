@@ -20,9 +20,9 @@
         android:id="@+id/select"
         android:layout_width="327dp"
         android:layout_height="87dp"
-        android:layout_marginTop="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
         android:background="@color/dark_blue"
         android:fontFamily="serif"
         android:text="@string/select_details"
@@ -41,9 +41,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/button_details"
+        app:layout_constraintEnd_toStartOf="@+id/button_act1"
         app:layout_constraintHorizontal_bias="0.711"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select"
@@ -56,10 +56,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="44dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/button_checklist"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintEnd_toStartOf="@+id/button_act2"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/star1"
         app:srcCompat="@android:drawable/star_big_off" />
@@ -71,16 +71,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/button_luggage"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintEnd_toStartOf="@+id/button_act3"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/star2"
         app:srcCompat="@android:drawable/star_big_off" />
 
     <ImageView
-        android:id="@+id/star"
+        android:id="@+id/star4"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:layout_alignParentTop="true"
@@ -88,8 +88,23 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="56dp"
         android:contentDescription="@string/star"
-        app:layout_constraintEnd_toStartOf="@+id/button_luggage"
+        app:layout_constraintEnd_toStartOf="@+id/button_act4"
         app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star3"
+        app:srcCompat="@android:drawable/star_big_off" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="152dp"
+        android:contentDescription="@string/star"
+        app:layout_constraintEnd_toStartOf="@+id/button_act5"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/star3"
         app:srcCompat="@android:drawable/star_big_off" />
@@ -120,60 +135,79 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_luggage"
+        android:id="@+id/button_act1"
         android:layout_width="210dp"
         android:layout_height="65dp"
-        android:layout_marginTop="45dp"
         android:backgroundTint="@color/aqua"
-        android:text="@string/luggage_details"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_checklist" />
-
-    <Button
-        android:id="@+id/button_activities"
-        android:layout_width="210dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="45dp"
-        android:backgroundTint="@color/aqua"
-        android:text="@string/activities"
+        android:layout_marginTop="30dp"
+        android:text="@string/activity"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_luggage" />
-
-    <Button
-        android:id="@+id/button_details"
-        android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="45dp"
-        android:backgroundTint="@color/aqua"
-        android:text="@string/trip_details"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select" />
 
     <Button
-        android:id="@+id/button_checklist"
+        android:id="@+id/button_act2"
         android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="45dp"
+        android:layout_height="65dp"
         android:backgroundTint="@color/aqua"
-        android:text="@string/pre_trip_check"
+        android:layout_marginTop="30dp"
+        android:text="@string/activity"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_details" />
+        app:layout_constraintTop_toBottomOf="@+id/button_act1" />
+
+    <Button
+        android:id="@+id/button_act3"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/aqua"
+        android:layout_marginTop="30dp"
+        android:text="@string/activity"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_act2" />
+
+    <Button
+        android:id="@+id/button_act4"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/aqua"
+        android:layout_marginTop="30dp"
+        android:text="@string/activity"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_act3" />
+
+    <Button
+        android:id="@+id/button_act5"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/aqua"
+        android:layout_marginTop="30dp"
+        android:text="@string/activity"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_act4" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
