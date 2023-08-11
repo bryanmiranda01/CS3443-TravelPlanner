@@ -15,7 +15,7 @@
 
 
 <!--Trip strings-->
-    <string name="upcoming_trips">Upcoming trips</string>
+    <string name="upcoming_trips">Upcoming trip</string>
     <string name="add_trip">Add trip</string>
     <string name="destination">-Destination:</string>
     <string name="hotel_address">-Hotel Address:</string>
@@ -57,6 +57,7 @@
     <string name="trip_details">Trip details</string>
     <string name="pre_trip_check">Pre-trip checklist</string>
     <string name="luggage_details">Luggage</string>
+    <string name="todo">To-do</string>
 
 
 <!--Icons/images/symbols-->
@@ -65,7 +66,9 @@
     <string name="button">Button</string>
 
 <!--Settings-->
+    <string name="Settings">Settings</string>
     <string name="Account" />
+    <string name="Log">Log out</string>
     <string name="AccountButton">Account</string>
     <string name="ReminderNotifButton" />
     <string name="RemindersNotifsButton">Reminders/\nNotifications</string>
@@ -76,8 +79,8 @@
     <string name="phoneNum">"Phone #: "</string>
     <string name="update">Update Account Information?</string>
     <string name="changePassword">Change Password?</string>
-    <string name="loggedout">You have been logged out.</string>
-    <string name="backtologin">Redirecting to the login screen</string>
+    <string name="loggedout">Would you like the log out?</string>
+    <string name="backtologin">You will be redirected to the login screen</string>
     <string name="reminders_notifs">Reminders/Notifications</string>
     <string name="enableReminders">Enable Reminders?</string>
     <string name="setReminders">"Set Reminders for:\n\t-Upcoming trip date\n\t-Activities "</string>

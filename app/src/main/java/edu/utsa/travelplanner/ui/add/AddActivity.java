@@ -32,7 +32,7 @@ public class AddActivity extends AppCompatActivity {
         EditText endd_input = findViewById(R.id.ans_enddate);
         EditText endt_input = findViewById(R.id.ans_endtime);
 
-        //BUtton implementation to verify all fields have been filled
+        //Button implementation to verify all fields have been filled
         Button doneButton = findViewById(R.id.done_act);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +64,7 @@ public class AddActivity extends AppCompatActivity {
         });
     }
 
+    //Sends user back to home screen
     private void setupBackButton() {
         imageButton = (ImageButton) findViewById(R.id.back_add_activity);
         imageButton.setOnClickListener(new View.OnClickListener() {

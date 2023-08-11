@@ -10,7 +10,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
     <!-- Shopping List Title -->
     <TextView
@@ -96,7 +96,8 @@
         android:layout_height="wrap_content"
         android:text="Add More"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/aqua"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_gravity="center_horizontal"
@@ -110,7 +111,7 @@
         android:layout_height="wrap_content"
         android:text="BACK TO PREVIOUS MENU"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
@@ -122,6 +123,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
 </LinearLayout>

@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#96ECEC">
+    android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topmargin"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
-        android:background="@color/teal_700"
+        android:background="@color/dark_blue"
         app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay" />
 
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/teal_700"
+        android:background="@color/dark_blue"
         android:layout_marginBottom="0dp"
         app:popupTheme="@style/Theme.TravelPlanner.PopupOverlay" />
 
@@ -47,7 +47,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/white"
         android:drawableLeft="@drawable/baseline_person_outline_24"
         android:drawablePadding="20dp"
         android:gravity="start"
@@ -67,7 +66,6 @@
         android:layout_marginEnd="20dp"
         android:inputType="textPassword"
         android:layout_marginBottom="20dp"
-        android:background="@color/white"
         android:drawableLeft="@drawable/baseline_password_24"
         android:drawablePadding="20dp"
         android:gravity="start"
@@ -94,7 +92,7 @@
         android:layout_below="@id/password"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:backgroundTint="#BBE5EA"
+        android:backgroundTint="@color/aqua"
         android:gravity="center_horizontal"
         android:shadowColor="#03D9C4"
         android:text="Enter"
@@ -107,31 +105,36 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/login_image"
         android:gravity="center"
+        android:textSize="25sp"
         android:text="Sign in"
         android:textAlignment="gravity"
         android:textColor="@color/black"
         android:textStyle="italic" />
 
+
     <TextView
         android:id="@+id/newuser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
         android:layout_below="@id/signin_button"
+        android:layout_alignParentEnd="true"
+        android:background="@color/aqua"
         android:layout_marginLeft="90dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="145dp"
         android:text="New User?"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
-
     <TextView
         android:id="@+id/forgotpw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
         android:layout_below="@id/newuser"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="10dp"
+        android:background="@color/aqua"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="35dp"
         android:text="Forgot password?"
         android:textColor="@color/black"
         android:textSize="20sp"

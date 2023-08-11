@@ -1,57 +1,72 @@
 package edu.utsa.travelplanner.ui.home;
 
-
 import android.content.Context;
 import android.content.Intent;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
 import android.view.View;
 
 import android.widget.ImageButton;
-
-
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.AppBarConfiguration;
 
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import edu.utsa.travelplanner.R;
 
+import edu.utsa.travelplanner.data.tripdata.TripData;
 import edu.utsa.travelplanner.databinding.ActivityMainBinding;
 import edu.utsa.travelplanner.ui.itinerary.ItineraryActivity;
 
 import edu.utsa.travelplanner.ui.map.MapActivity;
 import edu.utsa.travelplanner.ui.settings.SettingsActivity;
 
-
 public class HomeLanding extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
-
+    public TextView dest_txt, date_txt;
+    public Cursor c1;
+    public StringBuilder dest, date;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        edu.utsa.travelplanner.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        //edu.utsa.travelplanner.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.app_bar_main);
         //setSupportActionBar(binding.appBarMain.toolbar);
         setupItinButton();
         setupSetButton();
         setupMapButton();
 
-        // Delete database tripdata
+        // Delete databases
         //Context context = getApplicationContext();
         //context.deleteDatabase("travelplanner.db");
         //context.deleteDatabase("tripdetails.db");
         //context.deleteDatabase("luggagedetails.db");
-       // context.deleteDatabase("activitydetails.db");
+        //context.deleteDatabase("activitydetails.db");
+
+        dest_txt = (TextView) findViewById(R.id.loc_placeholder1);
+        date_txt = (TextView) findViewById(R.id.date_placeholder);
+
+        TripData tripData = new TripData(this);
+        c1 = tripData.fetchDetails();
+        dest = new StringBuilder();
+        date = new StringBuilder();
+
+        while (c1.moveToNext()) {
+            dest.append(c1.getString(1));
+            date.append(c1.getString(4));
+        }
+        dest_txt.setText(dest);
+        date_txt.setText(date);
 
 //      FAB to add trip details--------------------------------------------
         FloatingActionButton fab_add = (FloatingActionButton) findViewById(R.id.fab_add);
@@ -63,7 +78,6 @@ public class HomeLanding extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         /*
         //Navigation bar
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

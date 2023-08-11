@@ -34,7 +34,7 @@ public class ItineraryActivity extends AppCompatActivity {
         setContentView(R.layout.itinerary_view);
         setupBackButton();
 
-        //Fetch and set textviews for trip info
+        //Fetch and set textviews with trip info
         dest_text = (TextView) findViewById(R.id.itin_location);
         start_text = (TextView) findViewById(R.id.date_placeholder);
 

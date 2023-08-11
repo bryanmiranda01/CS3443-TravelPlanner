@@ -26,6 +26,7 @@ public class TripDetails extends AppCompatActivity {
         setContentView(R.layout.activity_trip_details);
         setupBackButton();
 
+        //Set textviews with database information
         destInput = findViewById(R.id.textDestination);
         addInput = findViewById(R.id.textHotelAddress);
         ccInput = findViewById(R.id.textCitiesWillVisit);

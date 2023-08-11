@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import edu.utsa.travelplanner.R;
 
 public class AddSelection extends AppCompatActivity {
-    ImageButton imageButton;
-    Button b1,b2,b3;
+    public ImageButton imageButton;
+    public Button b1,b2,b3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -35,7 +35,6 @@ public class AddSelection extends AppCompatActivity {
             }
         });
     }
-
 
     private void setupLuggageButton() {
         b2 = (Button) findViewById(R.id.addLuggage1);

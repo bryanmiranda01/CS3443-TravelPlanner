@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ebebeb">
+    android:background="@color/white">
 
     <!-- Upper area with color #303030 -->
     <View
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
     <!-- Trip_date -->
     <TextView
@@ -26,7 +26,8 @@
         android:text="@string/trip_details"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <!-- Destination -->
     <TextView
@@ -137,19 +138,19 @@
         android:layout_height="wrap_content"
         android:text="Back to Previous Menu"
         android:textSize="18sp"
-        android:textColor="#000000"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/aqua"
         android:background="@drawable/rounded_edittext"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    />
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
 
     <!-- Lower area with color #303030 -->
     <View
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#303030" />
+        android:background="@color/dark_blue" />
 
 </LinearLayout>
