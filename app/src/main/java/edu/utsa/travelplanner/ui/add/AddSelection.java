@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
+import edu.utsa.travelplanner.ui.itinerary.ItineraryActivity;
 
 public class AddSelection extends AppCompatActivity {
     public ImageButton imageButton;
@@ -63,7 +64,8 @@ public class AddSelection extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(AddSelection.this, ItineraryActivity.class);
+                startActivity(intent);
             }
         });
     }

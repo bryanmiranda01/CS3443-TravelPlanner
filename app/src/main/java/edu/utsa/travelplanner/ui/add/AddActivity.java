@@ -1,6 +1,5 @@
 package edu.utsa.travelplanner.ui.add;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.data.activitydata.ActivityData;
-import edu.utsa.travelplanner.ui.itinerary.ItineraryActivity;
 
 public class AddActivity extends AppCompatActivity {
     ImageButton imageButton;
@@ -57,8 +55,7 @@ public class AddActivity extends AppCompatActivity {
 
                 } else {
                     db.addActivityData(name, loc, startd, startt, endd, endt);
-                    Intent intent = new Intent(AddActivity.this, ItineraryActivity.class);
-                    startActivity(intent);
+                    finish();
                 }
             }
         });
