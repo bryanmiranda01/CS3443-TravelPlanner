@@ -15,7 +15,7 @@ Bryan Miranda ([bryanmiranda01](https://github.com/bryanmiranda01))
 Joe Louie Corporal ([joelouie222](https://github.com/joelouie222)) <br />
 Jeremiah Haywood (github_username) <br />
 Xuancheng "Kevin" Zhou ([chikevinchiXZ](https://github.com/chikevinchiXZ)) <br />
-Meylin Rivas (github_username) <br />
+Meylin Rivas ([m3ylin0](https://github.com/m3ylin0)) <br />
 
 ### Description <br />
 A simple travel planning application written in ***Java*** that will allow a user to consolidate all the information they may need when preparing for a trip. The main feature of this app will allow the user to create a trip itinerary that will allow them to list which activities they want to complete.
