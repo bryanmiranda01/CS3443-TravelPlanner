@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.travelplanner.R;
 import edu.utsa.travelplanner.data.activitydata.ActivityData;
+import edu.utsa.travelplanner.ui.itinerary.ViewSelection;
 
 public class SelectActivity extends AppCompatActivity {
 
-    public Cursor cursor1,c1, c2, c3, c4, c5;
+    public Cursor c1, c2, c3, c4, c5;
     public TextView act1_txt, act2_txt, act3_txt, act4_txt, act5_txt;
     public StringBuilder bAct1, bAct2, bAct3, bAct4, bAct5;
     public Button button;
@@ -93,7 +94,7 @@ public class SelectActivity extends AppCompatActivity {
 
     //Sends user back to activity
     private void setupAct2() {
-        ImageButton button = (ImageButton) findViewById(R.id.back_btn);
+        button = (Button) findViewById(R.id.button_act2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,7 +105,7 @@ public class SelectActivity extends AppCompatActivity {
     }
     //Sends user back to activity
     private void setupAct3() {
-        ImageButton button = (ImageButton) findViewById(R.id.back_btn);
+        button = (Button) findViewById(R.id.button_act3);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +116,7 @@ public class SelectActivity extends AppCompatActivity {
     }
     //Sends user back to activity
     private void setupAct4() {
-        ImageButton button = (ImageButton) findViewById(R.id.back_btn);
+        button = (Button) findViewById(R.id.button_act4);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,7 +127,7 @@ public class SelectActivity extends AppCompatActivity {
     }
         //Sends user back to activity
         private void setupAct5() {
-            ImageButton button = (ImageButton) findViewById(R.id.back_btn);
+            button = (Button) findViewById(R.id.button_act5);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -141,7 +142,8 @@ public class SelectActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(SelectActivity.this, ViewSelection.class);
+                startActivity(intent);
             }
         });
     }

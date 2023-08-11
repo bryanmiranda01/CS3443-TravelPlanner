@@ -1,6 +1,7 @@
 package edu.utsa.travelplanner.ui.home;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
@@ -60,7 +61,8 @@ public class AddTrip extends AppCompatActivity implements Serializable {
 
                 } else {
                     db.addTripData(dest, add, cc_, start, end, transp);
-                    finish();
+                    Intent intent = new Intent(AddTrip.this, HomeLanding.class);
+                    startActivity(intent);
                     }
                 }
         });
